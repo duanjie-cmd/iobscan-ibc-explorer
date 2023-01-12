@@ -1,0 +1,16 @@
+@import '../../themes.less';
+
+.@{css-prefix}-tree {
+    // 字体样式设置
+    font-family: 'Monaco', 'Menlo', 'Consolas', 'Bitstream Vera Sans Mono', monospace;
+    font-size: 14px;
+    text-align: left;
+
+    &.is-virtual {
+        overflow: auto;
+
+        .@{css-prefix}-tree-node {
+            white-space: nowrap;
+        }
+    }
+}

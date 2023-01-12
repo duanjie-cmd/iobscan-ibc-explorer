@@ -88,7 +88,23 @@
                 force-render
             >
                 <loading-component v-if="loading" :type="LoadingType.container" :height="208" />
-                <pre v-else-if="JSONSource" class="view_source__json">{{ JSONSource }}</pre>
+                <!-- JSONSource -->
+                <!-- JSON.stringify(JSONSource, null, '\t') -->
+                <!-- <pre v-else-if="JSONSource" class="view_source__json">{{
+                    JSON.stringify(JSONSource, null, '\t')
+                }}</pre> -->
+                <vue-json-pretty
+                    v-else-if="JSONSource"
+                    class="view_source__json"
+                    :data="(JSONSource as any)"
+                    :deep="1000"
+                    :show-line-number="false"
+                    :show-line="false"
+                    :show-length="true"
+                    :show-icon="true"
+                    :show-double-quotes="true"
+                >
+                </vue-json-pretty>
                 <no-datas v-else :text="errorText" />
             </a-tab-pane>
         </a-tabs>
@@ -96,6 +112,7 @@
 </template>
 
 <script setup lang="ts">
+    import VueJsonPretty from '@/components/vueJson';
     import type { IIbcTxInfo, IProgress, ITxInfo } from '@/types/interface/transfers.interface';
     import { TRANSFER_DETAILS_TABLE, TRANSFER_DETAILS_TAB } from '@/constants/transfers';
     import { useViewSource } from '../composable';
@@ -154,6 +171,13 @@
             height: 16px;
         }
         &__json {
+            // min-height: 100px;
+            width: 100%;
+            min-width: 400px;
+            // white-space: pre-wrap;
+            // word-wrap: break-word;
+            // word-break: break-all;
+            overflow: auto;
             font-size: var(--bj-font-size-normal);
             font-family: GolosUIWebRegular;
             font-weight: 400;
