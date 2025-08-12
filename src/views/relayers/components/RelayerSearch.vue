@@ -142,24 +142,24 @@
                 border-radius: 4px 0 0 4px;
                 box-shadow: unset;
                 background-color: #fff;
-                border-right: 1px solid var(--bj-border-color);
+                border-right: 1px solid var(--ibc-border-color);
                 .button_icon {
                     border-left: none;
                     padding: 0 6px 0 3px;
                     .iconfont {
                         font-size: 18px;
-                        color: var(--bj-text-third);
+                        color: var(--ibc-text-third);
                     }
                 }
                 .selecetd_text {
                     margin-right: 0;
-                    color: var(--bj-text-second);
+                    color: var(--ibc-text-second);
                 }
                 .selected_color {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                 }
                 .visible_color {
-                    color: var(--bj-primary-color) !important;
+                    color: var(--ibc-primary-color) !important;
                 }
             }
             &__complete {
@@ -199,8 +199,8 @@
     }
     .overlay_container {
         background: #fff;
-        color: var(--bj-text-second);
-        border: 1px solid var(--bj-border-color);
+        color: var(--ibc-text-second);
+        border: 1px solid var(--ibc-border-color);
         border-radius: 4px;
         text-align: center;
 
@@ -208,12 +208,12 @@
             padding: 12px 0;
 
             &:hover {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
             }
         }
         .selected_option {
             background: rgba(61, 80, 255, 0.04);
-            color: var(--bj-primary-color);
+            color: var(--ibc-primary-color);
         }
     }
 

@@ -6,7 +6,7 @@
         icon="icon-Tokens"
         title="Tokens"
     >
-        <!-- 此处修改类名需注意，全局搜一下 -->
+        <!-- Note: If you modify the class name here, please search globally -->
         <div class="address_tokens_c__table">
             <TableCommon
                 :has-padding-lr="false"

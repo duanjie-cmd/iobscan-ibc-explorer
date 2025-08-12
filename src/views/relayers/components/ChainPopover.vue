@@ -148,11 +148,11 @@
                     margin-right: 4px;
                     font-size: 14px;
                     font-weight: 500;
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                     line-height: 18px;
                 }
                 .iconfont {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                     margin-top: 1px;
                 }
             }

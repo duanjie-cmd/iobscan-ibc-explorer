@@ -21,7 +21,7 @@ import { getTxDetailsByTxHashAPI } from '@/api/transfers';
 import { API_CODE } from '@/constants/apiCode';
 import { useGetIbcDenoms } from '@/composables';
 import { formatBigNumber, JSONparse, rmIbcPrefix } from '@/helper/parseStringHelper';
-import { IDataItem, TDenom } from '@/components/BjSelect/interface';
+import { IDataItem, TDenom } from '@/components/Select/interface';
 import { dayjsUtc, dayjsFormatDate } from '@/utils/timeTools';
 import ChainHelper from '@/helper/chainHelper';
 import { Ref } from 'vue';

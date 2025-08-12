@@ -11,7 +11,7 @@ import {
     getTotalRelayedValueAPI,
     getTransferTypeTxsAPI
 } from '@/api/relayers';
-import { IDataItem } from '@/components/BjSelect/interface';
+import { IDataItem } from '@/components/Select/interface';
 import { useMatchBaseDenom } from '@/composables';
 import {
     PRETTYNAME,
@@ -72,9 +72,9 @@ export const useGetRelayerDetailsInfo = () => {
     const relayedSuccessTxs = ref<number>(0);
     const relayerInfo = ref<IDenomStatistic>(RELAYER_DETAILS_INFO);
     const channelPairsInfo = ref<IChannelChain[]>([]);
-    // relayer_name 适配
+    // relayer_name adaptor
     const displayAdaptor = ref<boolean>(false);
-    // chain_name 先左右排，再上下排
+    // chain_name first left and right, then up and down
     const sortChannelPairsByChainName = async (channelPairsInfoArr: IChannelChain[]) => {
         if (!channelPairsInfoArr?.length) return [];
         const chainChannelLRSort = ChainHelper.sortByPrettyName(channelPairsInfoArr);
@@ -636,7 +636,7 @@ export const useSelectedSearch = (
             const chainInfoArr: IIbcchain[] = [];
             for (const i in newServedChainsInfo) {
                 const chainInfo = await ChainHelper.getChainInfoByKey(newServedChainsInfo[i]);
-                // 不支持的 chain 在此处不展示
+                // Unsupported chain is not displayed here
                 if (chainInfo) {
                     chainInfoArr.push(chainInfo);
                 }
@@ -1608,7 +1608,7 @@ export const useRelatedAssetChart = (
                             mapLegend[uniqueName] = item.base_denom;
                         }
                     }
-                    // value 需要过滤出显示为0的值
+                    // value needs to filter out the value displayed as 0
                     const valueDenomList = denomList.filter((denom) => {
                         return (
                             denom.txs_value != '0' &&

@@ -141,7 +141,7 @@ export const PAGE_PARAMETERS = {
     transfers: 'transfers',
     tokens: 'tokens',
     ibcToken: 'ibcToken',
-    // home 页跳转参数中判断 包含的是 channel， 非 channels，[IBC_STATISTICS_CHANNELS_DEFAULT]
+    // In the home page jump parameter, determine whether it contains channel, not channels, [IBC_STATISTICS_CHANNELS_DEFAULT]
     channel: 'channel',
     channels: 'channels',
     relayers: 'relayers',
@@ -408,7 +408,6 @@ export const DEFAULT_TITLE = {
 
 export const UNKNOWN_SYMBOL = 'unknown';
 
-// todo dj environment variable
 export const PRETTYNAME = {
     COSMOSHUB: 'Cosmos Hub',
     IRISHUB: 'IRISnet'
@@ -476,16 +475,13 @@ export const BIG_UNIT = {
     }
 };
 
-// todo dj environment variable
 export const SYMBOL = {
     ATOM: 'ATOM',
     IRIS: 'IRIS'
 };
-// todo dj environment variable
 export const BASE_DENOM = {
     uatom: 'uatom'
 };
-// todo dj environment variable
 export const BASE_DENOM_CHAIN = {
     cosmoshub: 'cosmoshub'
 };

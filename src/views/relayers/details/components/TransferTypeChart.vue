@@ -41,9 +41,9 @@
         }
         &__type {
             margin-top: 12px;
-            font-size: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
             font-weight: 400;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             line-height: 20px;
         }
     }

@@ -19,6 +19,6 @@ module.exports = {
         padding: spacing
     },
     corePlugins: {
-        preflight: false // 禁用默认
+        preflight: false // Disable default styles
     }
 };

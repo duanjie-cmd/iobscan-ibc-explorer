@@ -64,12 +64,12 @@
         width: 250px;
         height: 36px;
         &:hover {
-            border-color: var(--bj-primary-color);
+            border-color: var(--ibc-primary-color);
         }
         :deep(.ant-picker-input) {
             input {
                 font-family: GolosUIWebRegular;
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
                 text-align: center;
                 &::placeholder {
                     color: v-bind(pickerPlaceholderColor);
@@ -79,6 +79,6 @@
                 cursor: url('../assets/forbidden.png'), not-allowed;
             }
         }
-        border: 1px solid var(--bj-border-color);
+        border: 1px solid var(--ibc-border-color);
     }
 </style>

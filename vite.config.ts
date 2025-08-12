@@ -40,12 +40,12 @@ export default ({ mode }: { mode: string }) => {
             vueJsx(),
             Components({
                 dts: 'src/types/globalComponents.d.ts',
-                dirs: ['src/components'], // 按需加载的文件夹
+                dirs: ['src/components'], // Folders for on-demand loading
                 resolvers: [AntDesignVueResolver({ importStyle: 'less' })]
             }),
             AutoImport({
-                imports: ['vue', 'vue-router', 'pinia'], // 自动导入vue和vue-router相关函数
-                dts: 'src/types/autoImport.d.ts' // 生成 `auto-import.d.ts` 全局声明
+                imports: ['vue', 'vue-router', 'pinia'], // Auto import vue and vue-router related functions
+                dts: 'src/types/autoImport.d.ts' // Generate `auto-import.d.ts` global declarations
             }),
             viteCompression({
                 ext: '.gz',
@@ -64,7 +64,7 @@ export default ({ mode }: { mode: string }) => {
             open: 'http://localhost:3000'
         },
         build: {
-            // 打包删除console配置 以及报错
+            // Remove console and error configurations in production build
             minify: 'terser',
             terserOptions: {
                 compress: {

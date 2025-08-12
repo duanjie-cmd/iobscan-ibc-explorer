@@ -32,13 +32,13 @@ export const TRANSFER_DETAILS_STATUS = {
     }
 };
 
-// 交易详情判断是否超出最大宽度所需
+// Transaction details determine whether the maximum width is exceeded
 export const ICON_MARGIN_RIGHT_WIDTH = 28;
 export const MAX_ALLOW_WIDTH = 152;
 export const CHAIN_ID_LABEL = 'Chain ID';
 export const RELAYER_LABEL = 'Name';
 
-// 新的 TokenInfo
+// New TokenInfo
 export const TOKEN_INFO_LIST: IInfoList = {
     label: 'Amount',
     value: '--'
@@ -114,7 +114,7 @@ export const IBC_TX_INFO_STATUS = {
     unknown: 'unknown'
 };
 
-// 定义 TxProgress 所需源数据
+// Define TxProgress source data
 export const SUCCESS_ARRIVE: IProgress[] = [
     {
         progress: 'Transfer',

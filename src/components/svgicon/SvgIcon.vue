@@ -14,11 +14,11 @@
     const props = withDefaults(defineProps<IProps>(), {
         color: '#3d50ff'
     });
-    // 图标在 iconfont 中的名字
+    // Icon name in iconfont
     const iconClassName = computed(() => {
         return `#${props.iconName}`;
     });
-    // 给图标添加上类名
+    // Add class name to the icon
     const svgClass = computed(() => {
         if (props.classDynamic) {
             return `svg-icon ${props.classDynamic}`;

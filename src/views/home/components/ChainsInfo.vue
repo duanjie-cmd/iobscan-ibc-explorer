@@ -46,7 +46,7 @@
         &:hover {
             .card__content {
                 &__value {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                 }
             }
         }
@@ -57,24 +57,24 @@
         &__content {
             .flex(column, nowrap, flex-start, flex-start);
             &__name {
-                font-size: var(--bj-font-size-sub-title);
-                color: var(--bj-font-color-65);
-                line-height: var(--bj-font-size-sub-title);
+                font-size: var(--ibc-font-size-sub-title);
+                color: var(--ibc-font-color-65);
+                line-height: var(--ibc-font-size-sub-title);
                 margin-bottom: 16px;
             }
             &__value {
-                font-size: var(--bj-font-size-home-number);
+                font-size: var(--ibc-font-size-home-number);
                 font-family: GolosUI_Medium;
-                color: var(--bj-text-normal);
-                line-height: var(--bj-font-size-home-number);
+                color: var(--ibc-text-normal);
+                line-height: var(--ibc-font-size-home-number);
                 transition: color 0.3s ease;
             }
             &__tip {
                 margin-left: 8px;
                 padding: 0 4px;
-                font-size: var(--bj-font-size-small);
+                font-size: var(--ibc-font-size-small);
                 color: #3d50ff;
-                line-height: var(--bj-font-size-small);
+                line-height: var(--ibc-font-size-small);
                 background: rgba(61, 80, 255, 0.15);
                 border-radius: 7px;
             }

@@ -31,11 +31,11 @@
 
 <style lang="less">
     .title {
-        font-size: var(--bj-font-size-sub-title);
-        color: var(--bj-text-normal);
+        font-size: var(--ibc-font-size-sub-title);
+        color: var(--ibc-text-normal);
     }
 
     .subtitle {
-        color: var(--bj-text-third);
+        color: var(--ibc-text-third);
     }
 </style>

@@ -56,9 +56,9 @@
         &__index {
             width: 24px;
             min-width: 24px;
-            font-size: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
             font-weight: 400;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             line-height: 22px;
             text-align: right;
         }

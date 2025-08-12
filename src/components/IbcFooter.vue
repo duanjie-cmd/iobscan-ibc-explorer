@@ -45,10 +45,10 @@
 
 <style lang="less" scoped>
     .dark {
-        color: var(--bj-text-second-white);
+        color: var(--ibc-text-second-white);
     }
     .light {
-        color: var(--bj-font-color-65);
+        color: var(--ibc-font-color-65);
     }
     .footer_container {
         .flex(column, nowrap, space-between, center);
@@ -65,9 +65,9 @@
 
             &__left {
                 .flex(row, nowrap, flex-start, center);
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
                 font-weight: 400;
-                color: var(--bj-font-color-65);
+                color: var(--ibc-font-color-65);
 
                 &__icon {
                     .flex(row, nowrap, center, center);
@@ -76,7 +76,7 @@
                     height: 28px;
                     padding: 6px;
                     background-color: rgba(61, 80, 255, 0.1);
-                    border-radius: var(--border-radius-normal);
+                    border-radius: var(--ibc-border-radius-normal);
 
                     &:first-child {
                         .content__left__iconfont {
@@ -91,7 +91,7 @@
                     }
 
                     &:hover {
-                        background-color: var(--bj-primary-color);
+                        background-color: var(--ibc-primary-color);
 
                         .content__left__iconfont {
                             color: #fff;
@@ -100,13 +100,13 @@
                 }
 
                 &__iconfont {
-                    font-size: var(--bj-font-size-sub-title);
-                    color: var(--bj-primary-color);
+                    font-size: var(--ibc-font-size-sub-title);
+                    color: var(--ibc-primary-color);
                 }
             }
 
             &__right {
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
                 font-weight: 400;
                 line-height: 14px;
             }

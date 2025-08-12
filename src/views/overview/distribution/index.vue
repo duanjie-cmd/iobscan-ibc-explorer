@@ -3,7 +3,7 @@
         <PageTitle title="IBC Token Distribution" />
         <div class="distribution__container">
             <div class="distribution__select">
-                <BjSelect
+                <Select
                     ref="distributionTokenDropdown"
                     class="distribution__token_select"
                     :data="distributionTokenData"
@@ -78,7 +78,7 @@
             min-height: 360px;
             max-height: 1000px;
             background: #fff;
-            border-radius: var(--border-radius-normal);
+            border-radius: var(--ibc-border-radius-normal);
             &__wrap {
                 width: 100%;
                 background: #f8fafd;

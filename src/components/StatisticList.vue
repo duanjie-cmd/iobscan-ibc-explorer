@@ -23,7 +23,7 @@
                         class="list_item__value"
                         :style="{
                             cursor: item.no_link ? 'text' : 'pointer',
-                            color: item.no_link ? 'var(--bj-text-normal)' : ''
+                            color: item.no_link ? 'var(--ibc-text-normal)' : ''
                         }"
                     >
                         <span v-if="item.unit" class="list_item__dollar">{{ item.unit }} </span>
@@ -56,7 +56,7 @@
                             class="list_item__value"
                             :style="{
                                 cursor: item.no_link ? 'text' : 'pointer',
-                                color: item.no_link ? 'var(--bj-text-normal)' : ''
+                                color: item.no_link ? 'var(--ibc-text-normal)' : ''
                             }"
                         >
                             <span v-if="item.unit" class="list_item__unit">{{ item.unit }} </span>
@@ -101,10 +101,10 @@
     .list_item {
         padding: 24px 0;
         width: 100%;
-        border-bottom: 1px solid var(--bj-border-color);
+        border-bottom: 1px solid var(--ibc-border-color);
         &:hover {
             .list_item__value {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
             }
         }
         &:first-child {
@@ -119,7 +119,7 @@
             padding-left: 24px;
             width: 25%;
             .flex(row, nowrap, space-between, flex-start);
-            border-right: 1px solid var(--bj-border-color);
+            border-right: 1px solid var(--ibc-border-color);
             &:first-child {
                 padding-left: 0;
             }
@@ -132,9 +132,9 @@
         }
 
         &__name {
-            font-size: var(--bj-font-size-sub-title);
-            color: var(--bj-font-color-65);
-            line-height: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
+            color: var(--ibc-font-color-65);
+            line-height: var(--ibc-font-size-sub-title);
             margin-bottom: 16px;
             white-space: nowrap;
         }
@@ -142,17 +142,17 @@
         &__value {
             transition: color 0.3s;
             transition-timing-function: ease;
-            font-size: var(--bj-font-size-home-number);
+            font-size: var(--ibc-font-size-home-number);
             font-family: GolosUI_Medium;
-            color: var(--bj-text-normal);
-            line-height: var(--bj-font-size-home-number);
+            color: var(--ibc-text-normal);
+            line-height: var(--ibc-font-size-home-number);
         }
         &__tip {
             margin-left: 8px;
             padding: 0 4px;
-            font-size: var(--bj-font-size-small);
+            font-size: var(--ibc-font-size-small);
             color: #3d50ff;
-            line-height: var(--bj-font-size-small);
+            line-height: var(--ibc-font-size-small);
             background: rgba(61, 80, 255, 0.15);
             border-radius: 7px;
         }
@@ -181,7 +181,7 @@
                     border-bottom: 0;
                 }
                 &__info {
-                    border-right: 1px solid var(--bj-border-color);
+                    border-right: 1px solid var(--ibc-border-color);
                 }
             }
         }
@@ -193,7 +193,7 @@
             .list_item__horizontal {
                 padding: 24px 0;
                 width: 100%;
-                border-bottom: 1px solid var(--bj-border-color);
+                border-bottom: 1px solid var(--ibc-border-color);
                 border-right: 0;
                 &:nth-of-type(2n + 1) {
                     padding-left: 0;
@@ -220,7 +220,7 @@
                 }
                 .list_item {
                     width: 100%;
-                    border-right: 1px solid var(--bj-border-color);
+                    border-right: 1px solid var(--ibc-border-color);
                 }
             }
         }
@@ -238,7 +238,7 @@
                 }
                 &:nth-last-child(2) {
                     padding-bottom: 24px;
-                    border-bottom: 1px solid var(--bj-border-color);
+                    border-bottom: 1px solid var(--ibc-border-color);
                 }
                 &__info {
                     border-right: 0;
@@ -261,7 +261,7 @@
                 }
                 &:nth-last-child(2) {
                     padding-bottom: 24px;
-                    border-bottom: 1px solid var(--bj-border-color);
+                    border-bottom: 1px solid var(--ibc-border-color);
                 }
             }
         }

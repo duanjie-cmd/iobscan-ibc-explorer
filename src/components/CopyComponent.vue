@@ -26,7 +26,7 @@
         clearTimeout(copyTimer.value);
         const clipboard = new Clipboard('#tag_copy');
         clipboard.on('success', () => {
-            // 释放内存
+            // Release memory
             isShowCopied.value = true;
             clipboard.destroy();
             copyTimer.value = setTimeout(() => {
@@ -34,8 +34,8 @@
             }, 3000);
         });
         clipboard.on('error', () => {
-            // 不支持复制
-            // 释放内存
+            // Copy not supported
+            // Release memory
             isShowCopied.value = false;
             clipboard.destroy();
         });
@@ -47,11 +47,11 @@
         margin-left: 8px;
         display: inline-block;
         align-items: center;
-        color: var(--bj-primary-color);
+        color: var(--ibc-primary-color);
         user-select: none;
         .copied {
             .flex(row, nowrap, flex-start, center);
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             line-height: 14px;
             .text {
                 margin-left: 3px;

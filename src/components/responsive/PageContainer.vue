@@ -8,7 +8,7 @@
 
 <style lang="less" scoped>
     .page_container {
-        background-color: var(--bj-background-color);
+        background-color: var(--ibc-background-color);
         flex: 1;
         padding: 48px 48px 100px;
         width: 100%;

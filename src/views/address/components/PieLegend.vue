@@ -51,7 +51,7 @@
             margin-right: 4px;
             height: 8px;
             width: 1px;
-            background-color: var(--bj-background-color-third);
+            background-color: var(--ibc-background-color-third);
         }
         &__percentage {
             width: 50px;

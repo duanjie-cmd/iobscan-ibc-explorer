@@ -57,7 +57,7 @@
             padding: 24px;
             min-height: 600px;
             background: #fff;
-            border-radius: var(--border-radius-normal);
+            border-radius: var(--ibc-border-radius-normal);
         }
         &__left {
             flex: 1;

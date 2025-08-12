@@ -37,15 +37,15 @@
 <style lang="less" scoped>
     .addr_diff {
         &__text {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
             line-height: 14px;
         }
         &__text_default {
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
         }
         &__other {
-            color: var(--bj-primary-color);
+            color: var(--ibc-primary-color);
         }
     }
 </style>

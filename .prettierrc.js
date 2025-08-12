@@ -1,32 +1,32 @@
 module.exports = {
-    // 一行最多 100 字符
+    // Maximum 100 characters per line
     printWidth: 100,
-    // 使用 4 个空格缩进
+    // Use 4 spaces for indentation
     tabWidth: 4,
-    // 不使用 tab 缩进，而使用空格
+    // Use spaces instead of tabs for indentation
     useTabs: false,
-    // 行尾需要有分号
+    // Require semicolons at the end of lines
     semi: true,
-    // vue文件的script标签和Style标签下的内容需要缩进
+    // Indent content inside script and style tags in Vue files
     vueIndentScriptAndStyle: true,
-    // 使用单引号代替双引号
+    // Use single quotes instead of double quotes
     singleQuote: true,
-    // 对象的 key 仅在必要时用引号
+    // Quote object keys only when necessary
     quoteProps: 'as-needed',
-    // 大括号内的首尾需要空格 { foo: bar }
+    // Add spaces inside object braces { foo: bar }
     bracketSpacing: true,
-    // 末尾不使用逗号
+    // No trailing commas
     trailingComma: 'none',
-    // 箭头函数，只有一个参数的时候，也需要括号
+    // Always include parentheses around arrow function parameters
     arrowParens: 'always',
-    // 不需要自动在文件开头插入 @prettier
+    // Do not automatically insert @prettier at the beginning of files
     insertPragma: false,
-    // 不需要写文件开头的 @prettier
+    // Do not require @prettier at the beginning of files
     requirePragma: false,
-    // 折行标准 如果散文超过宽度，则换行。
+    // Wrap prose if it exceeds the print width
     proseWrap: 'always',
-    // 空白敏感性 "strict"- 所有标签周围的空格（或缺少空格）被认为是重要的。
+    // HTML whitespace sensitivity - all whitespace around tags is considered significant
     htmlWhitespaceSensitivity: 'strict',
-    // 换行符使用 lf
+    // Use LF line endings
     endOfLine: 'auto'
 };

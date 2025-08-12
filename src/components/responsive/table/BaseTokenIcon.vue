@@ -68,7 +68,7 @@
     .token_icon {
         &:hover {
             .leading_none {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
             }
         }
     }
@@ -84,19 +84,19 @@
     }
 
     .title {
-        font-size: var(--bj-font-size-sub-title);
+        font-size: var(--ibc-font-size-sub-title);
         font-family: GolosUI_Medium;
-        color: var(--bj-text-second);
+        color: var(--ibc-text-second);
     }
 
     .subtitle {
         font-family: GolosUI_Medium;
-        color: var(--bj-text-third);
+        color: var(--ibc-text-third);
     }
 
     .tag {
-        font-size: var(--bj-font-size-small);
-        color: var(--bj-primary-color);
+        font-size: var(--ibc-font-size-small);
+        color: var(--ibc-primary-color);
         padding: 2px 4px;
         width: 53px;
         border-radius: 8px;

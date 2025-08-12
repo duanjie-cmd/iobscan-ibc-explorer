@@ -62,16 +62,16 @@
 <style lang="less" scoped>
     .submenu {
         &__item {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
             color: rgba(0, 0, 0, 0.65);
             line-height: 16px;
             cursor: pointer;
             &:hover {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
                 background: rgba(61, 80, 255, 0.04);
                 .submenu__item_link {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                 }
             }
         }
@@ -85,23 +85,23 @@
             color: rgba(0, 0, 0, 0.65);
         }
         &__item_link_active {
-            color: var(--bj-primary-color);
+            color: var(--ibc-primary-color);
         }
         &__item_submenu_wrap {
             background: #eef0f6;
         }
         &__item_submenu {
             padding: 8px 8px 8px 24px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
             color: rgba(0, 0, 0, 0.65);
             line-height: 16px;
             &:hover {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
             }
         }
         &__item_submenu_active {
-            color: var(--bj-primary-color);
+            color: var(--ibc-primary-color);
         }
     }
     @media screen and (max-width: 1150px) {

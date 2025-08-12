@@ -65,7 +65,7 @@
             top: 0;
             left: 0;
             right: 0;
-            z-index: 1100; // 下拉框和
+            z-index: 1100; // Dropdown box and
         }
         &__content {
             flex: 1;

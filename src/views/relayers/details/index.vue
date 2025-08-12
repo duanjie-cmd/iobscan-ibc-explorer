@@ -245,7 +245,7 @@
                     .list_item__horizontal {
                         padding: 24px 0;
                         width: 100%;
-                        border-bottom: 1px solid var(--bj-border-color);
+                        border-bottom: 1px solid var(--ibc-border-color);
                         border-right: 0;
                         &:nth-of-type(2n + 1) {
                             padding-left: 0;
@@ -272,7 +272,7 @@
                         }
                         .list_item {
                             width: 100%;
-                            border-right: 1px solid var(--bj-border-color);
+                            border-right: 1px solid var(--ibc-border-color);
                         }
                     }
                 }
@@ -385,7 +385,7 @@
                         }
                         &:nth-last-child(2) {
                             padding-bottom: 24px;
-                            border-bottom: 1px solid var(--bj-border-color);
+                            border-bottom: 1px solid var(--ibc-border-color);
                         }
                     }
                 }

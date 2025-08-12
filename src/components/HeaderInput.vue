@@ -94,9 +94,9 @@
         }
         &__option {
             padding: 12px 0;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             line-height: 18px;
             text-align: left;
             border-bottom: 1px solid rgba(151, 151, 151, 0.2);
@@ -106,7 +106,7 @@
             }
             &__invalid {
                 margin-left: 4px;
-                color: var(--bj-failed);
+                color: var(--ibc-failed);
             }
         }
         &__input {
@@ -138,7 +138,7 @@
             border-color: #667aff;
         }
         &__icon {
-            font-size: var(--bj-font-size-home-number);
+            font-size: var(--ibc-font-size-home-number);
             color: rgba(255, 255, 255, 0.7);
         }
     }
@@ -153,7 +153,6 @@
         border-color: rgba(61, 80, 255, 1) !important;
         border-right-color: transparent !important;
     }
-    // todo shan 考虑失去焦点时，缓慢变换宽度
     .input_focus_style {
         position: absolute;
         right: 48px;

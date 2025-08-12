@@ -107,7 +107,7 @@
         &__chain_name {
             margin-left: 8px;
             max-width: 120px;
-            font-size: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
             font-family: GolosUI_Medium;
             color: #000000;
             line-height: 18px;

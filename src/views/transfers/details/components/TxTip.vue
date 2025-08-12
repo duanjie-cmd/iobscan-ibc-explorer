@@ -18,7 +18,7 @@
     .tx_tip {
         margin-top: 16px;
         padding: 8px;
-        color: var(--bj-failed);
+        color: var(--ibc-failed);
         background: rgba(255, 90, 90, 0.1);
         border-radius: 8px;
         word-break: break-all;

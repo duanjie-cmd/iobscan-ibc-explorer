@@ -60,8 +60,8 @@
     interface IProps {
         icon: string;
         title: string;
-        isShowChooseBtn?: boolean; // 右侧是否有按钮
-        defaultChooseBtn?: number; // 默认按钮索引
+        isShowChooseBtn?: boolean; // Whether there is a button on the right
+        defaultChooseBtn?: number; // Default button index
         downloadTip?: string;
         tipMsg?: string;
         subTitle?: string;
@@ -90,10 +90,10 @@
     .info_card {
         margin-top: 18px;
         background: #ffffff;
-        border-radius: var(--border-radius-normal);
+        border-radius: var(--ibc-border-radius-normal);
         &__title_wrap {
             padding: 12px 24px;
-            border-bottom: 1px solid var(--bj-border-color);
+            border-bottom: 1px solid var(--ibc-border-color);
         }
         &__title {
             .flex(row, nowrap, flex-start, center);
@@ -104,10 +104,10 @@
         }
         &__text {
             margin-left: 8px;
-            font-size: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
             font-family: GolosUI_Medium;
             font-weight: 500;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             white-space: nowrap;
             line-height: 20px;
         }
@@ -127,7 +127,7 @@
         &__download {
             &__text {
                 margin-left: 4px;
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
                 font-weight: 400;
                 color: #3d50ff;
                 line-height: 18px;

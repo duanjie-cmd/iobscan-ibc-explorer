@@ -8,7 +8,7 @@ export interface IDataItem {
     tooltips?: string;
     doubleTime?: boolean;
     metaData?: any;
-    inputFlag?: boolean; // 判断是输入还是选择的，在展示的时候需要处理
+    inputFlag?: boolean; // Determine whether it is input or selection, needs to be processed when displayed
 }
 
 export type TData = {
@@ -27,7 +27,7 @@ export type TProps = {
     inputFlag?: boolean;
     placeholder?: string;
     hideIcon?: boolean;
-    associateId?: string | number; // 双选时候，input输入时候一个值时候，另外展示的值
+    associateId?: string | number; // When double selection, the value displayed when inputting one value
     badges?: [string, string];
     placeholders?: [string, string];
     inputCtn?: {

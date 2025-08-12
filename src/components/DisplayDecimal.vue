@@ -18,7 +18,6 @@
 </script>
 
 <style lang="less">
-    // todo dj style
     .diplay_decimal_c {
         &__integer {
             font-size: 18px;

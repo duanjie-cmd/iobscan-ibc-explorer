@@ -50,13 +50,13 @@
         .title_p {
             margin-right: 8px;
             .title {
-                font-size: var(--bj-font-size-title);
+                font-size: var(--ibc-font-size-title);
                 font-family: Eurocine-regular;
                 font-weight: 600;
             }
         }
         .number {
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             .iconfont {
                 margin-right: 4px;
             }

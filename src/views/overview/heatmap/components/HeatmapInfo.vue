@@ -81,9 +81,9 @@
         min-height: 528px;
         &__top {
             flex: 1;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             line-height: 18px;
         }
         &__text {
@@ -100,7 +100,7 @@
             .flex(row, nowrap, center, center);
             min-width: 50px;
             min-height: 26px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
             line-height: 18px;
             &::after {

@@ -54,31 +54,31 @@
         }
         &__label {
             width: 164px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-family: GolosUI_Medium;
             font-weight: 500;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             line-height: 18px;
         }
         &__value {
             flex: 1;
             margin-left: 40px;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             word-break: break-word;
         }
         &__address {
             &:hover {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
             }
         }
     }
     .success_color {
         font-family: GolosUI_Medium;
-        color: var(--bj-success);
+        color: var(--ibc-success);
     }
     .failed_color {
         font-family: GolosUI_Medium;
-        color: var(--bj-failed);
+        color: var(--ibc-failed);
     }
     @media screen and (max-width: 556px) {
         .progress_list {

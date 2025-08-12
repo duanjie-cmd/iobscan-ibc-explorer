@@ -62,7 +62,7 @@
             }
         }
     };
-    // 关闭弹窗
+    // Close modal
     const closeModal = () => {
         document.body.style.overflow = '';
         show.value = false;
@@ -121,7 +121,7 @@
                 font-weight: 400;
                 color: #ffffff;
                 line-height: 20px;
-                background: var(--bj-primary-color);
+                background: var(--ibc-primary-color);
                 border-radius: 4px;
                 margin: 0 auto;
             }

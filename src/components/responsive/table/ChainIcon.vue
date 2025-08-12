@@ -128,9 +128,9 @@
 
     .title {
         padding: 2px;
-        font-size: var(--bj-font-size-sub-title);
+        font-size: var(--ibc-font-size-sub-title);
         font-family: GolosUI_Medium;
-        color: var(--bj-text-second);
+        color: var(--ibc-text-second);
         max-width: 150px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -140,7 +140,7 @@
     .subtitle {
         padding: 2px;
         font-family: GolosUI_Medium;
-        color: var(--bj-text-third);
+        color: var(--ibc-text-third);
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;

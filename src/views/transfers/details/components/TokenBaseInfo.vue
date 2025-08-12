@@ -102,7 +102,7 @@
 <style lang="less" scoped>
     .token_info {
         padding-bottom: 24px;
-        border-bottom: 1px solid var(--bj-border-color);
+        border-bottom: 1px solid var(--ibc-border-color);
         &__details {
             .flex(row, nowrap, space-between, flex-start);
             margin-top: 16px;
@@ -148,17 +148,17 @@
         &__label {
             display: inline-block;
             width: 164px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-family: GolosUI_Medium;
             font-weight: 500;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
         }
         &__value {
             flex: 1;
             margin-left: 24px;
             width: 100%;
-            font-size: var(--bj-font-size-normal);
-            color: var(--bj-text-second);
+            font-size: var(--ibc-font-size-normal);
+            color: var(--ibc-text-second);
             word-break: break-all;
         }
         &__expand {

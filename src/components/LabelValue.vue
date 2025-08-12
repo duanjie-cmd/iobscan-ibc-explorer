@@ -29,18 +29,18 @@
             margin-top: 0;
         }
         &__label {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-family: GolosUI_Medium;
             font-weight: 500;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             white-space: nowrap;
         }
         &__value {
             flex: 1;
             margin-left: 24px;
             width: 100%;
-            font-size: var(--bj-font-size-normal);
-            color: var(--bj-text-second);
+            font-size: var(--ibc-font-size-normal);
+            color: var(--ibc-text-second);
             word-break: break-all;
         }
     }

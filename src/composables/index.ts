@@ -100,7 +100,7 @@ export const useChangeTitleAndIcon = () => {
     document.getElementsByTagName('head')[0].appendChild(title);
 };
 
-// table 中需要格式化的列
+// Columns that need to be formatted in the table
 export const useNeedCustomColumns = (whitePage: string) => {
     const needCustomColumns = ref<string[]>([]);
     const needCustomHeaders = ref<string[]>([]);
@@ -187,7 +187,7 @@ export const useIbcChains = (timerInterval?: number) => {
     };
 };
 
-// 重置状态跳转及点击跳转
+// Reset state jump and click jump
 export const useResetSearch = () => {
     // reset
     const resetSearch = (resetRoute?: string) => {
@@ -198,7 +198,7 @@ export const useResetSearch = () => {
     };
 };
 
-// 判断是否滚动到底部或是最上面
+// Determine whether to scroll to the bottom or the top
 export const useBoundary = (ele: HTMLElement) => {
     const res = ref({
         top: false,
@@ -226,7 +226,7 @@ export const useBoundary = (ele: HTMLElement) => {
     return res;
 };
 
-// 获取对应 ChainInfo，Todo 考虑 ibcChains 会存在情况
+// Get corresponding ChainInfo, consider the case where ibcChains exists
 export const useMatchChainInfo = (chain: string) => {
     let chainIcon = CHAIN_DEFAULT_ICON;
     let prettyName = DEFAULT_DISPLAY_TEXT;
@@ -303,7 +303,7 @@ export const useGetIbcDenoms = () => {
 
 export const useDocumentVisibility = () => {
     const ibcStatisticsChainsStore = useIbcStatisticsChains();
-    // 判断是否聚焦到本页签
+    // Determine whether the focus is on this page
     const watchDocument = () => {
         ibcStatisticsChainsStore.isDocumentHidden = document.hidden;
     };
@@ -314,9 +314,9 @@ export const useDocumentVisibility = () => {
 };
 
 export const usePickerPlaceholder = () => {
-    const pickerPlaceholderColor = ref('var(--bj-text-second)');
+    const pickerPlaceholderColor = ref('var(--ibc-text-second)');
     const onOpenChangeRangePicker = (open: boolean) => {
-        pickerPlaceholderColor.value = open ? 'var(--bj-text-third)' : 'var(--bj-text-second)';
+        pickerPlaceholderColor.value = open ? 'var(--ibc-text-third)' : 'var(--ibc-text-second)';
     };
     return {
         pickerPlaceholderColor,
@@ -324,7 +324,7 @@ export const usePickerPlaceholder = () => {
     };
 };
 
-// 根据图片加载状态展示对应的图片
+// Display the corresponding image based on the image loading status
 export const useImageLoadStatus = (image: Ref<string>, defaultImg: Ref<string>) => {
     const isSuccessLoadingImg = ref<boolean>(false);
     const isLoadingImg = ref<boolean>(true);

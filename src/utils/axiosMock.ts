@@ -3,7 +3,7 @@ import axios, { AxiosResponse, AxiosRequestConfig } from 'axios';
 import jsonBig from 'json-bigint';
 
 const serviceMock = axios.create({
-    baseURL: 'http://yapi.bianjie.ai/mock/23',
+    baseURL: '',
     timeout: AXIOS_TIMEOUT,
     transformResponse: (data) => {
         try {

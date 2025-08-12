@@ -36,9 +36,9 @@
     .status_container {
         .flex(row, nowrap, flex-start, center);
         padding: 0 8px;
-        font-size: var(--bj-font-size-normal);
+        font-size: var(--ibc-font-size-normal);
         font-weight: 400;
-        color: var(--bj-text-third);
+        color: var(--ibc-text-third);
         line-height: 28px;
         background: #f8f9fc;
         border-radius: 14px;

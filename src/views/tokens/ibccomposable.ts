@@ -14,7 +14,7 @@ import {
 import { isNullOrEmpty } from '@/utils/objectTools';
 import { urlPageParser } from '@/utils/urlTools';
 import { Ref } from 'vue';
-import { IDataItem } from '@/components/BjSelect/interface';
+import { IDataItem } from '@/components/Select/interface';
 import ChainHelper from '@/helper/chainHelper';
 import { formatSubTitle } from '@/helper/pageSubTitleHelper';
 

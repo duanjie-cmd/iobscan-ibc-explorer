@@ -20,7 +20,7 @@
                 !item.inputFlag ? item.title : getRestString(item.title, 4, 4)
             }}</span>
         </div>
-        <!--        都没有选的时候展示，类似placeholder-->
+        <!-- When nothing is selected, display like placeholder -->
         <div v-if="!selectItems.length">
             <span class="selected_info_title">{{ placeholder }}</span>
         </div>
@@ -32,7 +32,7 @@
     import { MODES } from '../constants';
 
     /**
-     * defineProps 使用外部引入的interface或者type会报错
+     * defineProps using external interface or type will report an error
      */
     interface TProps {
         visible: boolean;
@@ -56,8 +56,8 @@
                     ? selectColorDefaultVal.value
                     : [selectColorDefaultVal.value]
                 : [];
-        // 没有选择时，展开为 selected_color__third，关闭为 selected_color__default
-        // 选择的时候，包含默认值时候 selected_color__default，非默认值高亮 selected_color
+        // When nothing is selected, expand to selected_color__third, close to selected_color__default
+        // When selected, if it contains default value, it is selected_color__default, otherwise it is highlighted selected_color
         if (!selectItems.value.length) {
             return visible.value ? 'selected_color__third' : 'selected_color__default';
         }
@@ -70,23 +70,23 @@
 
 <style lang="less" scoped>
     .multiple {
-        border: 1px solid var(--bj-primary-color);
+        border: 1px solid var(--ibc-primary-color);
         margin: 2px;
         padding: 0 10px;
         border-radius: 4px;
     }
 
     .selected_color {
-        color: var(--bj-primary-color);
+        color: var(--ibc-primary-color);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         //max-width: 118px;
         &__default {
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
         }
         &__third {
-            color: var(--bj-text-third);
+            color: var(--ibc-text-third);
         }
     }
     .selected_info_title {

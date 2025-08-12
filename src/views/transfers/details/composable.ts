@@ -86,7 +86,7 @@ export const useTransfersDetailsInfo = () => {
     const ibcStatisticsChainsStore = useIbcStatisticsChains();
     const router = useRouter();
     const route = useRoute();
-    // 界面所需数据
+    // Interface required data
     const ibcTxStatus = ref<number>(IBC_TX_STATUS.default);
     const errorLog = ref<string>('No error message feedback.');
     const tokenInfo = ref<ITokenInfo>();
@@ -95,7 +95,7 @@ export const useTransfersDetailsInfo = () => {
     const relayerInfo = ref<IRelayerInfo>();
     const sequence = ref<string>(DEFAULT_DISPLAY_TEXT);
     const ibcTxInfo = ref<IIbcTxInfo>();
-    // 是否需要换行
+    // Whether to need to change line
     const isFlexColumn = ref<boolean>(false);
 
     const getTransferDetails = async () => {
@@ -197,7 +197,7 @@ const calculateTextLength = (
 export const useTokenInfo = (props: Readonly<IUseTokenInfo>) => {
     const tokenInfoList = ref<IInfoList>(TOKEN_INFO_LIST);
     const tokenInfoListExpand = ref<IInfoList[]>(TOKEN_INFO_LIST_EXPAND);
-    // 是否展示 Token 缩略
+    // Whether to display Token summary
     const isShowTokenDetailsInfo = ref<boolean>(false);
     const matchInfo = ref();
     watch(
@@ -247,7 +247,7 @@ export const useChainInfo = (
     const chainInfoList = ref<IInfoList>(CHAIN_INFO_LIST);
     const chainInfoListExpand = ref<IInfoList[]>(CHAIN_INFO_LIST_EXPAND);
     const searchChainIcon = ref<string>(CHAIN_DEFAULT_ICON);
-    // 是否展示 Token 缩略
+    // Whether to display Token summary
     const isShowChainDetailsInfo = ref<boolean>(false);
     watch(
         () => props.chainInfo,

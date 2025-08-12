@@ -164,7 +164,7 @@
         &__more {
             position: relative;
             width: v-bind('NAV_ITEM_WIDTH.pc');
-            font-size: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
             color: rgba(255, 255, 255, 0.65);
             &:hover {
                 color: #fff;
@@ -281,7 +281,7 @@
                     }
                 }
                 &__left {
-                    font-size: var(--bj-font-size-sub-title);
+                    font-size: var(--ibc-font-size-sub-title);
                 }
                 &__img {
                     margin-right: 4px;

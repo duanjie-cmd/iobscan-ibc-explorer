@@ -10,8 +10,8 @@ import { TRANSFER_DETAILS_STATUS } from '@/constants/transfers';
 import { DEFAULT_DISPLAY_TEXT } from '@/constants';
 /**
  *
- * @param price 价格 不超过10w
- * @param numberOfDecimal 4位小数
+ * @param price price, no more than 10w
+ * @param numberOfDecimal 4 decimal places
  * @returns $ xxx
  */
 

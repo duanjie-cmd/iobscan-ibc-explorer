@@ -2,7 +2,7 @@
     <PageContainer>
         <PageTitle title="IBC Channels" :subtitle="subtitle" />
         <div class="select flex items-center flex-wrap wrapRelative">
-            <BjSelect
+            <Select
                 ref="chainDropdown"
                 :data="chainData"
                 :value="chainIds"
@@ -151,7 +151,7 @@
         useChannelsSelected,
         useChannelsColumnJump
     } from '@/views/channels/composable';
-    import { MODES } from '@/components/BjSelect/constants';
+    import { MODES } from '@/components/Select/constants';
     import { formatBigNumber } from '@/helper/parseStringHelper';
 
     const { loading } = useLoading();

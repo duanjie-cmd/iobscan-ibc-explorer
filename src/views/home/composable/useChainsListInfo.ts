@@ -31,7 +31,7 @@ export const useAnchors = (chainList: Ref<IIbcChains>, emits: any) => {
         const chainQuery = prettyName[0].toUpperCase();
         const findAnchor = anchors.find((anchor) => anchor.collection.includes(chainQuery));
         const className = findAnchor?.title || '#';
-        // 初始值,第一次选中第一个chain 对应的标签
+        // Initial value, the first time the first chain corresponding tag is selected
         if (once) {
             once = false;
             nextTick(() => {
@@ -41,7 +41,7 @@ export const useAnchors = (chainList: Ref<IIbcChains>, emits: any) => {
         return className;
     };
 
-    // 点击高亮标签,滚动到合适的位置
+    // Click the highlighted tag, scroll to the appropriate position
     const onClickAnchor = (label: string) => {
         highlightedLabel(label);
         const scrollDom = scrollListRef.value.$el;
@@ -85,7 +85,7 @@ export const useAnchors = (chainList: Ref<IIbcChains>, emits: any) => {
                 lock.value = false;
                 return;
             }
-            // 通过滚动去获取当前高亮的标签
+            // Get the current highlighted tag through scrolling
             const containerDom: HTMLDivElement | null =
                 document.querySelector('#card_list .ant-row');
             if (containerDom) {
@@ -123,10 +123,10 @@ export const useAnchors = (chainList: Ref<IIbcChains>, emits: any) => {
         if (!(currentChainList && currentChainList.length > 0)) return;
         const scrollDom = scrollListRef.value.$el;
         if (!scrollDom) return;
-        // 通过标签去找符合当前列表的标签，然后再根据标签，滚动到合适的位置
-        // 1.如果当前高亮的标签页能找到, 以当前高亮的标签为准
-        // 2.如果当前高亮的标签 向上查找，能找到，则已找到的为准
-        // 3.如果向上查找未找到，则使用数据列表中第一个匹配上的标签
+        // Find the tag that matches the current list through the tag, and then scroll to the appropriate position according to the tag
+        // 1. If the current highlighted tag page can be found, the current highlighted tag is used as the standard
+        // 2. If the current highlighted tag can be found by searching upwards, the found one is used as the standard
+        // 3. If the search upwards fails, the first matching tag in the data list is used
         const id = document.querySelector('.self_link_active')?.id;
         let label: string;
         if (id) {
@@ -140,7 +140,7 @@ export const useAnchors = (chainList: Ref<IIbcChains>, emits: any) => {
         let findIndex = ANCHORS_DATAS.findIndex((item) => item.title === label);
         let isSuccess = false;
         let sureChainNameList = ANCHORS_DATAS[findIndex].collection;
-        // 终止条件 isSuccess 成功  或者 findIndex <= 0
+        // Termination condition isSuccess success or findIndex <= 0
         while (!(isSuccess || findIndex <= 0)) {
             for (let i = 0; i < sureChainNameList.length; i++) {
                 if (currentChainNameList.includes(sureChainNameList[i])) {
@@ -154,7 +154,7 @@ export const useAnchors = (chainList: Ref<IIbcChains>, emits: any) => {
                 sureChainNameList = ANCHORS_DATAS[findIndex].collection;
             }
         }
-        // 如果没找到，以列表中第一个数据，来确定高亮的标签
+        // If not found, use the first data in the list to determine the highlighted tag
         if (!isSuccess) {
             label = findClassName(currentChainList[0].pretty_name);
         }

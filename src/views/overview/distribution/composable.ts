@@ -1,6 +1,6 @@
 import * as echarts from 'echarts';
 import { getOverviewDistributionAPI } from '@/api/overview';
-import { IDataItem } from '@/components/BjSelect/interface';
+import { IDataItem } from '@/components/Select/interface';
 import { useGetIbcDenoms } from '@/composables';
 import {
     BASE_DENOM,
@@ -183,30 +183,30 @@ export const useDistributionSelect = () => {
                             rect: any,
                             size: any
                         ) => {
-                            // 解决悬浮窗显示遮挡问题
+                            // Solve the problem of the floating window display遮挡问题
                             let x = 0,
                                 y = 0;
-                            // 当前鼠标位置
+                            // Current mouse position
                             const pointX = point[0],
                                 pointY = point[1];
-                            // 提示框大小
+                            // Prompt box size
                             const boxWidth = size.contentSize[0],
                                 boxHeight = size.contentSize[1];
-                            // boxWidth > pointX 说明鼠标左边放不下提示框
+                            // boxWidth > pointX means the mouse left can't hold the prompt box
                             if (boxWidth > pointX) {
-                                x = 5; // 自己定个x坐标值，以防出屏
-                                y -= 15; // 防止点被覆盖住
+                                x = 5; // Set an x coordinate value yourself to prevent the screen from being out
+                                y -= 15; // Prevent the point from being covered
                             } else {
-                                // 左边放的下
+                                // The left can be placed
                                 x = pointX - boxWidth - 15;
                             }
-                            // boxHeight > pointY 说明鼠标上边放不下提示框
+                            // boxHeight > pointY means the mouse top can't hold the prompt box
                             if (boxHeight + 20 > pointY) {
                                 y = pointY + 15;
                             } else if (boxHeight > pointY) {
                                 y = 5;
                             } else {
-                                // 上边放得下
+                                // The top can be placed
                                 y += pointY - boxHeight;
                             }
                             return [x, y];

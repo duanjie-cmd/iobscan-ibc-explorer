@@ -6,13 +6,11 @@ import { IResponseTokensListItem, ITokensListItem } from '@/types/interface/toke
 import { IIbcchain, IIbcchainMap, IPrefixChain } from '@/types/interface/index.interface';
 import { getBaseDenomByKey } from '@/helper/baseDenomHelper';
 import { getRestString } from '@/helper/parseStringHelper';
-import { TData, TDenom, IDataItem } from '@/components/BjSelect/interface';
+import { TData, TDenom, IDataItem } from '@/components/Select/interface';
 import { useIbcStatisticsChains } from '@/store/index';
 
-// todo dj optimization export default => export
 export default class ChainHelper {
     // pretty_name sort
-    // Todo shan 该方法中 ibcChains 可能存在没有值的情况，需要做处理
     static sortByPrettyName(sourceList: any, chain?: any) {
         const { ibcChains } = useIbcChains();
         function changeChainsSort(item: any) {
@@ -41,7 +39,7 @@ export default class ChainHelper {
                 const matchChainB = ibcChains?.value?.all?.find(
                     (chain) => chain.chain_name === item.chain_b
                 );
-                // 满足单选情况
+                // Single selection case
                 if (chain?.split(',')[0] !== 'allchain' && chain?.split(',')[1] === 'allchain') {
                     if (matchChainB?.chain_name === chain?.split(',')[0]) {
                         changeChainsSort(item);
@@ -98,7 +96,7 @@ export default class ChainHelper {
         return [];
     }
 
-    // 按照类型顺序重新排序（ChainDropDown.vue 中的setAllChains 函数修改）
+    // Reorder by type order (modify the setAllChains function in ChainDropDown.vue)
     static sortArrsByNames(
         dropdownData: any[],
         sortNames = [PRETTYNAME.COSMOSHUB, PRETTYNAME.IRISHUB]
@@ -170,9 +168,9 @@ export default class ChainHelper {
         return temp;
     }
 
-    // channels and relayers 选择框是否需要排序
+    // Whether the channels and relayers selection box needs to be sorted
     static isNeedSort = (chainIdArr: TDenom[], chainsArrs: TData) => {
-        // 拍扁数组处理，集合
+        // Flatten array processing, collection
         const tempFlats: IDataItem[] = [];
 
         chainsArrs?.forEach((v) => {
@@ -181,13 +179,13 @@ export default class ChainHelper {
             }
         });
         /**
-         * 需要判断输入的值是否和选择的值匹配，使用匹配的值判断
-         * 1. 选择 All Chains + Other Chain => 相当于选择了一条链，第一个选择的是 All Chains 的需要 sort，第二个选择的是 All Chains 的不需要 sort
-         * 2. 选择了两个都不是 All Chains 的 chain
-         *      a. 判断选中两条链是否包含 Cosmos Hub 或 IRIS Hub：
-         *          包含 Cosmos Hub：左边不需要，右边需要
-         *          包含 IRIS Hub：左边不需要，右边需要
-         *      b. 其他的根据其对应 chain_name 字母大小写排序
+         * Need to determine if the input value matches the selected value, use the matched value to determine
+         * 1. Select All Chains + Other Chain => Equivalent to selecting a chain, the first selected All Chains needs to sort, the second selected All Chains does not need to sort
+         * 2. Selected two chains that are not All Chains
+         *      a. Determine if the selected two chains contain Cosmos Hub or IRIS Hub:
+         *          Contains Cosmos Hub: left does not need, right needs
+         *          Contains IRIS Hub: left does not need, right needs
+         *      b. Others are sorted according to the corresponding chain_name alphabetically
          */
         const isLocaleCompare = ref<boolean>(false);
         const chainsName = chainIdArr.map((id) => {

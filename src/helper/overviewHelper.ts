@@ -5,9 +5,9 @@ import { BIG_UNIT, DEFAULT_DISPLAY_TEXT } from '@/constants';
 import { bigNumberCompared, bigNumberDivide } from '@/utils/calculate';
 
 /**
- * 此处四舍五入
- * @param dimensionValue 需要格式化的数据
- * @param decimal 需要保留的小数位数，默认 2
+ * Here is rounding
+ * @param dimensionValue data to be formatted
+ * @param decimal the number of decimal places to be retained, default 2
  * @returns
  */
 export const formatDimension = (
@@ -34,7 +34,7 @@ export const formatDimension = (
         let moveLength = 0;
         for (let i = 0; i < bigUnitKeys.length; i++) {
             const key = bigUnitKeys[i];
-            const item = BIG_UNIT[key];
+            const item = BIG_UNIT[key as keyof typeof BIG_UNIT];
             if (bigNumberCompared(value, item.value) !== '-1') {
                 moveLength = item.moveLength;
                 break;
@@ -49,7 +49,7 @@ export const formatDimension = (
     let result;
     for (let i = 0; i < bigUnitKeys.length; i++) {
         const key = bigUnitKeys[i];
-        const item = BIG_UNIT[key];
+        const item = BIG_UNIT[key as keyof typeof BIG_UNIT];
         if (bigNumberCompared(value, item.value) !== '-1') {
             result = `${formatBigNumber(bigNumberDivide(value, item.value), decimal)}${item.unit}`;
             isDimension = true;

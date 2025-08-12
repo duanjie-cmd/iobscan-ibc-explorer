@@ -1,65 +1,77 @@
+TODO 开源
+
+1. 删除环境变量，只保留 dev 和 prod, dev 和 prod 保持一致，敏感信息 VITE_GID 置空
+2. 删除 package.json 中的命令，只保留 dev 和 prod 环境
+3. 修改 dockerfile, 去除更换镜像源
+4. 删除 index.html 中，网站站长配置信息，已添加注释
+
 ## iobscan-ibc-explorer
 
 IBC Explorer Frontend
 
+# Configure .env files and fill in environment variables
+
+```
+# Environment
+MODE = ''
+
+# Backend Service
+VITE_BASE_GO_API = ''
+
+# Logo icon
+VITE_LOGO_ICON = ''
+
+# Home url
+VITE_HOME_URL = ''
+
+# Title
+VITE_TITLE = ''
+
+# Favicon
+VITE_FAVICON = '/favicon.ico'
+
+# Google Analytics ID
+VITE_GID = ''
+```
+
 ## development
 
-step1 安装依赖
+Step 1: Install dependencies
 
 ```
- 	pnpm install
+pnpm install
 ```
 
-step2 服务启动, 后端服务地址可修改.env.development
+Step 2: Start development server, backend service URL can be modified in .env.development
 
 ```
-  pnpm dev
-```
-
-step3 preview
-
-```
-	pnpm preview
-```
-
-## qa
-
-step1 安装依赖
-
-```
- 	pnpm install
-```
-
-step2 build
-
-```
-  pnpm build:qa
-```
-
-## stage
-
-step1 安装依赖
-
-```
- 	pnpm install
-```
-
-step2 build
-
-```
-  pnpm build:stage
+pnpm dev
 ```
 
 ## production
 
-step1 安装依赖
+Step 1: Install dependencies
 
 ```
- 	pnpm install
+pnpm install
 ```
 
-step2 build
+Step 2: Build
 
 ```
-  pnpm build:prod
+pnpm build:prod
+```
+
+Step 3: Preview
+
+```
+pnpm preview
+```
+
+# Deploy
+
+Build Docker Image
+
+```
+docker build . -t iobscan-web  --build-arg 'ENVIRONMENT=prod'
 ```

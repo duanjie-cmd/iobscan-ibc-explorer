@@ -4,7 +4,7 @@
         <div class="transfer__middle relative">
             <div class="transfer__middle__top">
                 <div class="transfer__middle__left">
-                    <BjSelect
+                    <Select
                         :data="tokenData"
                         :value="searchToken"
                         :input-flag="inputFlag"
@@ -23,7 +23,7 @@
                         }"
                         @on-change="onSelectedToken"
                     />
-                    <BjSelect
+                    <Select
                         ref="chainDropdown"
                         :data="chainData"
                         :value="chains"
@@ -313,7 +313,7 @@
         useGoTransfersDetail,
         usePagination
     } from '@/composables';
-    import { MODES } from '@/components/BjSelect/constants';
+    import { MODES } from '@/components/Select/constants';
     import { TRANSFERS_TOKEN_DEFAULT_VALUE } from '@/constants/transfers';
     import { useGoAddressDetail } from '@/composables';
     const { currentPage, pageSize } = useCurrentPage();
@@ -414,7 +414,7 @@
             font-weight: 400;
             &__address {
                 &:hover {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                 }
             }
             :deep(.ant-table-thead tr th) {
@@ -438,13 +438,13 @@
                 min-height: 500px;
             }
             :deep(a, span) {
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
                 font-weight: 400;
-                color: var(--bj-font-color-65);
+                color: var(--ibc-font-color-65);
                 line-height: 14px;
             }
             .cell_name {
-                font-size: var(--bj-font-size-sub-title);
+                font-size: var(--ibc-font-size-sub-title);
                 line-height: 20px;
             }
             .token {
@@ -454,10 +454,10 @@
                     &:hover {
                         .token__info {
                             &__num {
-                                color: var(--bj-primary-color);
+                                color: var(--ibc-primary-color);
                             }
                             &__denom {
-                                color: var(--bj-primary-color);
+                                color: var(--ibc-primary-color);
                             }
                         }
                     }
@@ -472,15 +472,15 @@
                     .flex(column, nowrap, center, flex-start);
                     font-family: GolosUI_Medium;
                     &__num {
-                        font-size: var(--bj-font-size-sub-title);
-                        color: var(--bj-text-normal);
+                        font-size: var(--ibc-font-size-sub-title);
+                        color: var(--ibc-text-normal);
                         line-height: 20px;
                     }
 
                     &__denom {
                         margin-top: 1px;
-                        font-size: var(--bj-font-size-normal);
-                        color: var(--bj-text-third);
+                        font-size: var(--ibc-font-size-normal);
+                        color: var(--ibc-text-third);
                         line-height: 18px;
                     }
                 }
@@ -493,14 +493,14 @@
             .flex(row, nowrap, space-between, center);
             font-family: GolosUI_Medium;
             background: #ffffff;
-            border-radius: var(--border-radius-normal);
+            border-radius: var(--ibc-border-radius-normal);
             & .status_tips {
                 .flex(row, nowrap, space-between, center);
                 padding: 7px 9px;
                 width: 396px;
                 font-size: 14px;
                 font-weight: 400;
-                color: var(--bj-text-third);
+                color: var(--ibc-text-third);
                 line-height: 14px;
                 background: #f8f9fc;
                 border-radius: 14px;
@@ -527,7 +527,7 @@
     .tip {
         width: 20px;
         &_color {
-            color: var(--bj-font-color-65);
+            color: var(--ibc-font-color-65);
         }
     }
     :deep(tbody) {

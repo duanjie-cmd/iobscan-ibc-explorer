@@ -193,7 +193,7 @@
             height: 100%;
         }
         &__progress {
-            font-size: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
             font-weight: 400;
             color: #00000080;
             line-height: 20px;
@@ -201,7 +201,7 @@
         &__badge {
             margin-top: 2px;
             padding: 1px 8px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
             color: rgba(61, 80, 255, 0.49);
             line-height: 14px;
@@ -212,10 +212,10 @@
             background: #fff;
             .tx_progress__description {
                 .tx_progress__progress {
-                    color: var(--bj-text-normal);
+                    color: var(--ibc-text-normal);
                 }
                 .tx_progress__badge {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                     background: rgba(61, 80, 255, 0.2);
                 }
             }

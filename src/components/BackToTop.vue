@@ -15,10 +15,10 @@
         .flex(row, nowrap, center, center);
         width: 32px;
         height: 32px;
-        font-size: var(--bj-font-size-title);
+        font-size: var(--ibc-font-size-title);
         color: #fff;
-        background: var(--bj-primary-color);
-        border-radius: var(--border-radius-normal);
+        background: var(--ibc-primary-color);
+        border-radius: var(--ibc-border-radius-normal);
         box-shadow: 0px 0px 8px 0px rgba(61, 80, 255, 0.1);
     }
     .ant-back-top {

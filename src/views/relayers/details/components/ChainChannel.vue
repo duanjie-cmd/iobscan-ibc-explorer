@@ -49,16 +49,16 @@
             margin-left: 8px;
         }
         &__chain {
-            font-size: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
             font-family: GolosUI_Medium;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             line-height: 20px;
             white-space: nowrap;
         }
         &__channel {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             line-height: 18px;
         }
     }

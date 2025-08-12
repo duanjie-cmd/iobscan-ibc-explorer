@@ -42,7 +42,7 @@ export const urlParser = (url = document.location.toString()) => {
         return {};
     }
 };
-// 计算文本宽度 --> TextMetrics.width 是只读属性，chain 长度判断时需加 Icon 长度和间距
+// Calculate text width --> TextMetrics.width is a read-only property, and when chain length is judged, the length and spacing of Icon need to be added
 export const getTextWidth = (text: string, font = '14px GolosUI_Medium'): number => {
     if (!text) return 0;
     const canvas: HTMLCanvasElement = document.createElement('canvas');
@@ -54,7 +54,7 @@ export const getTextWidth = (text: string, font = '14px GolosUI_Medium'): number
     return textWidth || 0;
 };
 
-// 以最后一个空格分割取左边值
+// Split by the last space and take the left value
 export const getLeftValueByLastSpace = (name: string) => {
     const space = ' ';
     const formatNameArr = name.split(space);

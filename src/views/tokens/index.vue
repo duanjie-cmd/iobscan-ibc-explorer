@@ -2,7 +2,7 @@
     <PageContainer>
         <PageTitle title="IBC Tokens" :subtitle="subtitle" />
         <div class="select flex items-center flex-wrap wrapRelative">
-            <BjSelect
+            <Select
                 ref="tokensDropdown"
                 :data="tokenData"
                 :value="searchTokenKey"
@@ -22,7 +22,7 @@
                 }"
                 @on-change="onSelectedToken"
             />
-            <BjSelect
+            <Select
                 ref="chainDropdown"
                 :data="chainData"
                 :value="searchChain"
@@ -55,7 +55,6 @@
             need-count
         >
             <template #base_denom="{ record, column }">
-                <!-- todo dj TokenIcon => BaseTokenIcon and remove TokenIcon -->
                 <TokenIcon
                     title-can-click
                     :token-type="record.token_type"

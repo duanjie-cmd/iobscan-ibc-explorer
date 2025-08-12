@@ -40,14 +40,14 @@
             margin-left: 8px;
         }
         &__top {
-            font-size: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
             font-weight: 400;
             line-height: 20px;
         }
         &__bottom {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-text-third);
+            color: var(--ibc-text-third);
             line-height: 18px;
         }
     }

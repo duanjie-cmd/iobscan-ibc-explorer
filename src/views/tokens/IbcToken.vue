@@ -6,7 +6,7 @@
             :img-src="baseDenomInfo.imgSrc"
         />
         <div class="select flex items-center flex-wrap wrapRelative">
-            <BjSelect
+            <Select
                 ref="chainDropdown"
                 :data="chainData"
                 :value="searchChain"
@@ -179,7 +179,7 @@
     }
 
     .notice_text {
-        color: var(--bj-text-second);
+        color: var(--ibc-text-second);
     }
 
     // tablet

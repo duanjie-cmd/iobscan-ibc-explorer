@@ -97,12 +97,12 @@
         &__title {
             .flex(row, nowrap, flex-start, center);
             margin-right: 12px;
-            font-size: var(--bj-font-size-title);
+            font-size: var(--ibc-font-size-title);
             font-family: Eurocine-regular;
             font-weight: 600;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             line-height: 24px;
-            -webkit-text-stroke: 0px var(--bj-text-normal);
+            -webkit-text-stroke: 0px var(--ibc-text-normal);
         }
         &__title_left {
             overflow: hidden;
@@ -118,7 +118,7 @@
         }
         &__sub_title_wrap {
             .iconfont {
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
             }
         }
         &__sub_title_mobile {
@@ -126,9 +126,9 @@
         }
         &__sub_title {
             margin-left: 4px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             line-height: 14px;
             white-space: nowrap;
         }

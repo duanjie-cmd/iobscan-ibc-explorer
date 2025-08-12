@@ -135,13 +135,13 @@
             width: 100%;
             border: 0;
             :deep(.ant-menu-title-content) {
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
                 font-weight: 400;
             }
             :deep(.ant-menu-item-selected) {
                 .ant-menu-title-content {
                     font-family: GolosUI_Medium;
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                 }
             }
         }
@@ -151,9 +151,9 @@
             .flex(row, nowrap, flex-start, flex-start);
         }
         &__item {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-text-third);
+            color: var(--ibc-text-third);
         }
         :deep(.ant-menu-item) {
             padding: 0 24px 0 0;
@@ -172,7 +172,7 @@
         }
         .menu_card {
             position: relative;
-            border-radius: var(--border-radius-normal);
+            border-radius: var(--ibc-border-radius-normal);
             :deep(.ant-card-body) {
                 padding: 12px;
                 min-width: 160px;
@@ -186,21 +186,21 @@
             &__title {
                 margin: 6px auto 0;
                 max-width: 152px;
-                font-size: var(--bj-font-size-sub-title);
+                font-size: var(--ibc-font-size-sub-title);
                 font-family: GolosUI_Medium;
                 line-height: 20px;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                color: var(--bj-text-normal);
+                color: var(--ibc-text-normal);
                 vertical-align: middle;
             }
             &__value {
                 margin: 4px 0 6px;
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
                 line-height: 17px;
                 font-weight: 400;
-                color: var(--bj-font-color-65);
+                color: var(--ibc-font-color-65);
                 word-break: break-all;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -232,16 +232,16 @@
                 width: 100%;
                 margin: 6px 0;
                 text-align: justify;
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
                 font-weight: 400;
-                color: var(--bj-text-third);
+                color: var(--ibc-text-third);
                 transition: background-color 0.2s ease-in-out;
             }
             .self_link_active {
                 color: #ffffff;
                 width: 32px;
                 background-color: #3d50ff;
-                border-radius: var(--border-radius-normal);
+                border-radius: var(--ibc-border-radius-normal);
                 padding: 0px 2px;
                 .custom_title {
                     color: #fff;
@@ -259,14 +259,14 @@
                 margin-top: 16px;
                 font-size: 14px;
                 font-weight: 400;
-                color: var(--bj-font-color-65);
+                color: var(--ibc-font-color-65);
             }
         }
     }
     .custom_title {
         .flex(row, nowrap, space-between, center);
         font-family: GolosUI_Medium;
-        color: var(--bj-text-third);
+        color: var(--ibc-text-third);
         &__left {
             width: 10px;
             text-align: left;

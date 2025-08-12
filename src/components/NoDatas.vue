@@ -48,9 +48,9 @@
         }
         &__title {
             margin-top: 16px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-font-color-65);
+            color: var(--ibc-font-color-65);
         }
     }
 </style>

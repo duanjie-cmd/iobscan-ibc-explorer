@@ -117,63 +117,63 @@
 <style lang="less" scoped>
     .dropdown_container {
         height: 36px;
-        border: 1px solid var(--bj-border-color);
+        border: 1px solid var(--ibc-border-color);
         border-radius: 4px;
         background-color: #fff;
         min-width: 126px;
         &:hover {
-            border-color: var(--bj-primary-color);
+            border-color: var(--ibc-primary-color);
         }
     }
 
     .button_icon {
         transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         padding: 0 6px;
-        border-left: 1px solid var(--bj-border-color);
+        border-left: 1px solid var(--ibc-border-color);
         height: 34px;
         .iconfont {
             font-size: 18px;
-            color: var(--bj-text-third);
+            color: var(--ibc-text-third);
         }
     }
 
     .overlay_container {
         background: #fff;
-        color: var(--bj-text-second);
-        border: 1px solid var(--bj-border-color);
+        color: var(--ibc-text-second);
+        border: 1px solid var(--ibc-border-color);
         border-radius: 4px;
 
         .item {
             padding: 9px 12px;
 
             &:hover {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
             }
         }
     }
 
     .visible_border {
-        border: 1px solid var(--bj-primary-color) !important;
+        border: 1px solid var(--ibc-primary-color) !important;
         box-shadow: 0 0 0 2px rgb(61 80 255 / 20%);
     }
 
     .visible_color {
-        color: var(--bj-primary-color) !important;
+        color: var(--ibc-primary-color) !important;
     }
 
     .default_color {
-        color: var(--bj-text-second);
+        color: var(--ibc-text-second);
     }
 
     .selected_color {
-        color: var(--bj-primary-color);
+        color: var(--ibc-primary-color);
     }
     .selected_color_default {
-        color: var(--bj-text-second);
+        color: var(--ibc-text-second);
     }
 
     .selected_option {
         background: rgba(61, 80, 255, 0.04);
-        color: var(--bj-primary-color);
+        color: var(--ibc-primary-color);
     }
 </style>

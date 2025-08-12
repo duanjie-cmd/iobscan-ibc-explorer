@@ -110,7 +110,6 @@
     }
     const props = defineProps<IProps>();
     const { loading } = useLoading();
-    // todo shan 明确入参 需要优化
     const {
         activeKey,
         JSONSource,
@@ -128,10 +127,10 @@
     .view_source {
         margin-top: 16px;
         &__label {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-family: GolosUI_Medium;
             font-weight: 500;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             line-height: 18px;
         }
         &__bottom {
@@ -144,7 +143,7 @@
             margin-right: 8px;
         }
         &__expand_text {
-            color: var(--bj-primary-color);
+            color: var(--ibc-primary-color);
             white-space: nowrap;
             line-height: 26px;
         }
@@ -154,24 +153,24 @@
             height: 16px;
         }
         &__json {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-family: GolosUIWebRegular;
             font-weight: 400;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             line-height: 18px;
         }
         :deep(.ant-tabs-tab) {
             padding: 16px 0 8px;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
         }
         :deep(thead tr .ant-table-cell) {
             font-family: GolosUI_Medium;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             vertical-align: middle;
             background: #f8fafd !important;
         }
         :deep(.ant-table-cell) {
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
         }
         :deep(td) {
             word-break: break-all;
@@ -179,7 +178,7 @@
         :deep(.ant-table-cell-with-append) {
             min-width: 250px;
             font-family: GolosUI_Medium;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
         }
         :deep(.ant-tabs-nav-wrap) {
             border-bottom: rgba(61, 80, 255, 0.1);

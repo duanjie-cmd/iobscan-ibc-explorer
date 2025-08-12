@@ -1,7 +1,7 @@
 import { IDataItem, ModeType, TDenom } from './interface';
 import { MODES } from './constants';
 /**
- * 根据不同类型返回对应的数据：单选返回单值，多选返回数组集合
+ * Return data corresponding to different types: single selection returns single value, multiple selection returns array collection
  * @param selectData
  * @param mode
  * @param keygen
@@ -18,7 +18,7 @@ export const getValByMode = (selectData: IDataItem[], mode: ModeType) => {
 };
 
 /**
- * 根据类型判断是否要收起（true）
+ * Determine whether to collapse based on type (true)
  * @param selectData
  * @param mode
  */
@@ -34,7 +34,7 @@ export const closeByMode = (selectData: IDataItem[], mode: ModeType) => {
 };
 
 /**
- * 输入框输入时候的操作
+ * Input box input operation
  * @param inputVal
  * @param mode
  */
@@ -69,7 +69,7 @@ export const inputItemsByMode = (inputVal: string | undefined, mode: ModeType): 
     return res;
 };
 
-// 去重 || 可以重复多选的
+// Remove duplicates || can repeat multiple selections
 export const getLastArrs = (data?: IDataItem[]): IDataItem[] => {
     const res: IDataItem[] = [];
 

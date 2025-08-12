@@ -12,7 +12,7 @@ export const formatString = (address: string) => {
     }
 };
 
-// 截取小数位数
+// Intercept decimal places
 export const interceptionString = (text: string, reservedDecimal: number) => {
     if (text.includes('.') && text.length - (text.indexOf('.') + 1) > reservedDecimal) {
         let length = text.indexOf('.') + reservedDecimal;
@@ -23,7 +23,7 @@ export const interceptionString = (text: string, reservedDecimal: number) => {
     }
 };
 
-// 首字母大写
+// First letter capitalized
 export const firstLetterCapitalize = (str: string) => {
     const newStr = str.slice(0, 1).toUpperCase() + str.slice(1).toLowerCase();
     return newStr;

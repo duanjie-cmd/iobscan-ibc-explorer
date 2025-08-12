@@ -45,7 +45,7 @@ export const useHeaderInputSearch = (optionClass: string) => {
         try {
             return bech32.decode(prefix);
         } catch (error) {
-            // 输入时防止控制台有过多 console，保留
+            // Prevent too many console logs when input, keep
             // console.log(error);
         }
     };
@@ -126,7 +126,7 @@ export const useHeaderInputSearch = (optionClass: string) => {
             searchBoxJump(content || '');
         }
         removeInputBorderStyle();
-        // 调取埋点接口
+        // Call the tracking interface
         const params = {
             ip: IP,
             content: content

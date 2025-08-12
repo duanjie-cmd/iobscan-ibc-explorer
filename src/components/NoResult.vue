@@ -65,17 +65,17 @@
 
             .search_result {
                 &__label {
-                    font-size: var(--bj-font-size-sub-title);
+                    font-size: var(--ibc-font-size-sub-title);
                     font-weight: 600;
-                    color: var(--bj-text-normal);
+                    color: var(--ibc-text-normal);
                     line-height: 24px;
                 }
 
                 &__value {
                     margin-left: 8px;
-                    font-size: var(--bj-font-size-sub-title);
+                    font-size: var(--ibc-font-size-sub-title);
                     font-weight: 400;
-                    color: var(--bj-text-second);
+                    color: var(--ibc-text-second);
                     line-height: 24px;
                     word-break: break-all;
                 }
@@ -103,7 +103,7 @@
 
                     .result_tip_text {
                         margin-top: 15px;
-                        font-size: var(--bj-font-size-sub-title);
+                        font-size: var(--ibc-font-size-sub-title);
                         font-weight: 400;
                         color: rgba(0, 0, 0, 0.65);
                         line-height: 16px;
@@ -111,7 +111,7 @@
 
                     .result_description {
                         margin-top: 10px;
-                        font-size: var(--bj-font-size-normal);
+                        font-size: var(--ibc-font-size-normal);
                         line-height: 14px;
                         font-weight: 400;
                         color: rgba(0, 0, 0, 0.35);

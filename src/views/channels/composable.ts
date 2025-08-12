@@ -13,7 +13,7 @@ import { urlPageParser } from '@/utils/urlTools';
 import { computed, onMounted, ref, Ref } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { axiosCancel } from '@/utils/axios';
-import { IDataItem, TDenom } from '@/components/BjSelect/interface';
+import { IDataItem, TDenom } from '@/components/Select/interface';
 import { IIbcChains } from '@/types/interface/index.interface';
 import { formatSubTitle } from '@/helper/pageSubTitleHelper';
 

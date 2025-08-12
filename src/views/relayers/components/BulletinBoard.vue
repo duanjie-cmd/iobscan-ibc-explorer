@@ -25,7 +25,7 @@
 </script>
 <style lang="less" scoped>
     .bulletin {
-        background-color: var(--bj-background-color);
+        background-color: var(--ibc-background-color);
         width: 100%;
         &__container {
             background: rgba(61, 80, 255, 0.1);
@@ -40,22 +40,22 @@
                 justify-content: space-between;
                 align-items: center;
                 .desc {
-                    font-size: var(--bj-font-size-normal);
+                    font-size: var(--ibc-font-size-normal);
                     line-height: 18px;
                     color: rgba(0, 0, 0, 0.65);
                     align-self: flex-start;
                     .iconfont {
                         font-size: 14px;
-                        color: var(--bj-primary-color);
+                        color: var(--ibc-primary-color);
                     }
                     span {
                         margin-left: 12px;
                     }
                 }
                 .info {
-                    font-size: var(--bj-font-size-normal);
+                    font-size: var(--ibc-font-size-normal);
                     line-height: 18px;
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                     align-self: flex-end;
                     cursor: pointer;
                     .iconfont {

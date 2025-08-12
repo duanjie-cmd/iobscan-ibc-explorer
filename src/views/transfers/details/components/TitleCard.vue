@@ -11,10 +11,10 @@
 
 <style lang="less" scoped>
     .title {
-        font-size: var(--bj-font-size-sub-title);
+        font-size: var(--ibc-font-size-sub-title);
         font-family: GolosUI_Medium;
         font-weight: 500;
-        color: var(--bj-text-normal);
+        color: var(--ibc-text-normal);
         line-height: 16px;
     }
 </style>

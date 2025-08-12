@@ -12,7 +12,7 @@ import {
 import { urlPageParser } from '@/utils/urlTools';
 import { computed, ComputedRef, onMounted, ref, Ref } from 'vue';
 import { useRouter } from 'vue-router';
-import { IDataItem } from '@/components/BjSelect/interface';
+import { IDataItem } from '@/components/Select/interface';
 import { IBaseDenom, IIbcChains } from '@/types/interface/index.interface';
 import { axiosCancel } from '@/utils/axios';
 import ChainHelper from '@/helper/chainHelper';

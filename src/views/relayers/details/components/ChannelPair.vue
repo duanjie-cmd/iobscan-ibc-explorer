@@ -66,16 +66,16 @@
             }
         }
         &__chain_address {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             line-height: 18px;
             &:hover {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
             }
         }
         &__visible_border {
-            border: 1px solid var(--bj-primary-color) !important;
+            border: 1px solid var(--ibc-primary-color) !important;
             box-shadow: 0 0 0 2px rgb(61 80 255 / 20%);
         }
     }

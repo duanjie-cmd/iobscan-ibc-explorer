@@ -166,7 +166,6 @@ export const useInterfaceActive = () => {
                 name: 'Relayers'
             });
         } else {
-            // TODO shan 路由中不包含以上路由的提示
             // message.info({
             //     content: h(Message),
             //     icon: h('div'),
@@ -174,7 +173,7 @@ export const useInterfaceActive = () => {
         }
     };
     const onMenuSelected = () => {
-        // 参数传递menuKey
+        // Parameter passing menuKey
         // console.log(menuKey);
     };
     return {

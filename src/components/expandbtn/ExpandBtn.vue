@@ -22,16 +22,16 @@
 <style lang="less" scoped>
     .expand {
         margin-top: 16px;
-        font-size: var(--bj-font-size-normal);
+        font-size: var(--ibc-font-size-normal);
         font-weight: 400;
-        color: var(--bj-primary-color);
+        color: var(--ibc-primary-color);
         line-height: 14px;
         &__btn {
         }
         &__icon {
             display: inline-block;
             margin-left: 6px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
         }
         &__more {
             transform: rotate(180deg);

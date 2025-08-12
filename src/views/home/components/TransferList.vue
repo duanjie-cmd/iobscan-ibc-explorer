@@ -48,10 +48,10 @@
             width: 100%;
             .flex(row, nowrap, space-between, center);
             &__name {
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
                 font-family: GolosUI_Medium;
-                color: var(--bj-font-color-65);
-                line-height: var(--bj-font-size-normal);
+                color: var(--ibc-font-color-65);
+                line-height: var(--ibc-font-size-normal);
             }
             &__button {
                 padding: 1px 12px;
@@ -59,7 +59,7 @@
                 border-radius: 16px;
                 background-color: #3d50ff;
                 color: #ffffff;
-                font-size: var(--bj-font-size-normal);
+                font-size: var(--ibc-font-size-normal);
                 font-family: GolosUI_Medium;
                 .flex(row, nowrap, center, center);
                 &:hover {
@@ -76,7 +76,7 @@
             .transfer_list {
                 width: calc(100% - 48px);
                 height: 100%;
-                border-bottom: 1px solid var(--bj-border-color);
+                border-bottom: 1px solid var(--ibc-border-color);
                 overflow-y: auto;
                 overflow-x: hidden;
                 margin: 0 24px;
@@ -88,7 +88,7 @@
             padding: 16px 24px;
             max-width: 1200px;
             background: #ffffff;
-            border-radius: var(--border-radius-normal);
+            border-radius: var(--ibc-border-radius-normal);
         }
     }
     @media screen and (max-width: 768px) {

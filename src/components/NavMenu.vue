@@ -45,11 +45,11 @@
     .header_menu {
         .flex(row, nowrap, center, center);
         color: rgba(255, 255, 255, 0.65);
-        line-height: var(--bj-nav-height);
+        line-height: var(--ibc-nav-height);
         list-style: none;
         &__item {
             width: v-bind('NAV_ITEM_WIDTH.pc');
-            font-size: var(--bj-font-size-sub-title);
+            font-size: var(--ibc-font-size-sub-title);
             &:hover {
                 color: #fff;
                 background-image: url('../assets/nav/innovation_bar_bg.png');
@@ -91,7 +91,7 @@
     @media screen and (max-width: 1150px) {
         .header_menu {
             flex-direction: column;
-            background-color: var(--bj-text-normal);
+            background-color: var(--ibc-text-normal);
             &__item {
                 padding: 10px 32px;
                 width: 100%;

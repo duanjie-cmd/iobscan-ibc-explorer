@@ -167,7 +167,6 @@ export const formatSankeyData = async (sankeyData: IResponseDistribution) => {
             isZeroJumpLine: link.isZeroJumpLine
         });
     }
-    // todo shan pretty_name 排序逻辑抽离
     const cosmos = nodesArr.filter((item) => item.name.includes(PRETTYNAME.COSMOSHUB));
     const irishub = nodesArr.filter((item) => item.name.includes(PRETTYNAME.IRISHUB));
     const other = nodesArr

@@ -33,20 +33,20 @@
             border-radius: 14px;
         }
         &__success {
-            color: var(--bj-success);
+            color: var(--ibc-success);
             background: rgba(0, 200, 83, 0.1);
         }
         &__processing {
-            color: var(--bj-processing);
+            color: var(--ibc-processing);
             background: rgba(255, 196, 0, 0.1);
         }
         &__failed {
-            color: var(--bj-failed);
+            color: var(--ibc-failed);
             background: rgba(255, 90, 90, 0.1);
         }
         &__text {
             margin-left: 4px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-family: GolosUI_Medium;
         }
     }

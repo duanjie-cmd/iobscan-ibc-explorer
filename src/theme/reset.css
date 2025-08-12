@@ -88,12 +88,12 @@ html {
 }
 body {
     width: 100%;
-    font-size: var(--bj-font-size-normal) !important;
+    font-size: var(--ibc-font-size-normal) !important;
     font-family: GolosUIWebRegular, GolosUI_Medium, Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: var(--bj-text-normal);
-    background-color: var(--bj-background-color);
+    color: var(--ibc-text-normal);
+    background-color: var(--ibc-background-color);
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body::-webkit-scrollbar {

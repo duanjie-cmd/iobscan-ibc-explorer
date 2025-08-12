@@ -3,7 +3,7 @@ import * as echarts from 'echarts';
 import { useWindowSize } from '@vueuse/core';
 import BigNumber from 'bignumber.js';
 import moveIcon from '@/assets/overview/move.svg';
-import type { IDataItem } from '@/components/BjSelect/interface';
+import type { IDataItem } from '@/components/Select/interface';
 import type { ITransferVolumeItem } from '@/types/interface/overview.interface';
 import { CHAIN_DEFAULT_ICON, DEFAULT_DISPLAY_TEXT, NoDataType } from '@/constants';
 import { UNIT_SIGNS } from '@/constants/relayers';

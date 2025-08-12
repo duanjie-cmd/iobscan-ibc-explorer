@@ -122,7 +122,6 @@
         pageDisabled?: boolean;
         noDataType?: NoDataType;
     }
-    // Todo shan hasPaddingLr 能否修改 Transfer 列表页等移入每一行两边有间距的情况
     let backUpDataSource: any[] = [];
     const props = withDefaults(defineProps<IProps>(), {
         pageSize: null,
@@ -381,7 +380,7 @@
         max-height: 690px !important;
     }
     :deep(.ant-table-thead .ant-table-cell) {
-        font-size: var(--bj-font-size-sub-title);
+        font-size: var(--ibc-font-size-sub-title);
         padding: 14px 16px 14px 0;
         height: 48px;
         line-height: 1;
@@ -389,7 +388,7 @@
     }
     :deep(.ant-table-tbody .ant-table-cell) {
         padding-right: 35px;
-        color: var(--bj-text-second);
+        color: var(--ibc-text-second);
         line-height: 1;
         vertical-align: middle;
         &:first-child {
@@ -406,7 +405,7 @@
         display: none;
     }
     :deep(.ant-table-tbody > tr > td) {
-        border-bottom: 1px solid var(--bj-border-color);
+        border-bottom: 1px solid var(--ibc-border-color);
         padding: 16px 16px 15px 0;
         &:only-child {
             border-bottom: none;
@@ -461,7 +460,7 @@
         top: 48px;
         left: 0;
         right: 0;
-        background: var(--bj-border-color);
+        background: var(--ibc-border-color);
         height: 1px;
         z-index: 1;
     }

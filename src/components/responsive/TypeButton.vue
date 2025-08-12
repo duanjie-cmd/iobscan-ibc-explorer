@@ -39,7 +39,7 @@
         width: 32px;
         height: 32px;
         color: #fff;
-        background: var(--bj-primary-color);
+        background: var(--ibc-primary-color);
         border-radius: 4px;
         cursor: pointer;
         .iconfont {

@@ -2,7 +2,7 @@
     <InfoCard icon="icon-transactions" title="Transactions">
         <div class="relayer_transfer">
             <div class="relayer_transfer__search">
-                <BjSelect
+                <Select
                     ref="relayerChainDropdown"
                     :placeholder="defaultChain?.title || DEFAULT_TITLE.defaultChains"
                     :hide-icon="true"
@@ -182,7 +182,7 @@
         :deep(.ant-picker-disabled) {
             background: #fff;
             &:hover {
-                border-color: var(--bj-border-color);
+                border-color: var(--ibc-border-color);
             }
         }
         &__reset_btn {
@@ -210,25 +210,25 @@
                 }
             }
             &__tx_hash {
-                color: var(--bj-text-second);
+                color: var(--ibc-text-second);
                 &:hover {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                 }
             }
             &__address {
                 &:hover {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                 }
             }
         }
     }
     .success_color {
         font-family: GolosUI_Medium;
-        color: var(--bj-success);
+        color: var(--ibc-success);
     }
     .failed_color {
         font-family: GolosUI_Medium;
-        color: var(--bj-failed);
+        color: var(--ibc-failed);
     }
     @media screen and (max-width: 500px) {
         .relayer_transfer {

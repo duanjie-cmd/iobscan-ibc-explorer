@@ -45,7 +45,7 @@
             display: inline-block;
             &__title {
                 display: inline-block;
-                font-size: var(--bj-font-size-title);
+                font-size: var(--ibc-font-size-title);
                 font-family: Eurocine-regular;
                 font-weight: 600;
                 margin-right: 10px;
@@ -81,7 +81,7 @@
         &__content {
             width: 100%;
             background-color: #ffffff;
-            border-radius: var(--border-radius-normal);
+            border-radius: var(--ibc-border-radius-normal);
         }
         .tip_icon {
             width: 24px;

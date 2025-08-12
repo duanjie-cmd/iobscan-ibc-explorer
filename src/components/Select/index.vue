@@ -12,7 +12,7 @@
             class="flex items-center default_color dropdown_container cursor"
             :class="[{ visible_border: visible, disabled_border: isDisabled }]"
         >
-            <!--            多选单选的展示 start-->
+            <!-- Multiple selection single selection display start -->
             <template v-if="props.mode !== MODES.double">
                 <show-base
                     :visible="visible"
@@ -23,8 +23,8 @@
                     :select-color-default-val="selectColorDefaultVal"
                 />
             </template>
-            <!--            多选单选的展示 end-->
-            <!--            只选择两个时候的展示 start-->
+            <!-- Multiple selection single selection display end -->
+            <!-- Only select two display start -->
             <template v-else>
                 <show-double
                     :visible="visible"
@@ -34,7 +34,7 @@
                     :select-color-default-val="selectColorDefaultVal"
                 />
             </template>
-            <!--            只选择两个时候的展示 end-->
+            <!-- Only select two display end -->
             <span class="button_icon flex justify-between items-center">
                 <i
                     :class="[visible ? 'visible_color' : '']"
@@ -163,11 +163,11 @@
     import { getValByMode, closeByMode, inputItemsByMode, getLastArrs } from './helper';
     import { MODES } from './constants';
     /**
-     * defineProps 使用外部引入的interface或者type会报错
+     * defineProps using external interface or type will report an error
      */
     export interface IProps {
         data: TData;
-        // ux交互：选中时候展示default颜色。
+        // UX interaction: when selected, display default color.
         selectColorDefaultVal?: string | number | (string | number)[];
         inputFlag?: boolean;
         changeInputFlag?: (flag: boolean) => void;
@@ -175,7 +175,7 @@
         mode?: MODES.multiple | MODES.double;
         placeholder?: string;
         hideIcon?: boolean;
-        associateId?: string | number; // 双选时候，input输入时候一个值时候，另外展示的值
+        associateId?: string | number; // When double selection, the value displayed when inputting one value
         badges?: [string, string];
         placeholders?: [string, string];
         inputCtn?: {
@@ -200,11 +200,11 @@
     const { defaultValue, placeholder } = toRefs(props);
     const { visible, selectItems, tokenInput, flatData, resetVal } = useInit(props);
 
-    // 是否选中
+    // Whether selected
     const isSelected = (val: TDenom) =>
         selectItems.value.some((v) => v.id === val && !props.inputFlag);
 
-    // 获取badges
+    // Get badges
     const getBadgeStr = (val: TDenom) => {
         const isDouble = selectItems.value.filter((v) => v.id === val)?.length === 2;
 
@@ -224,8 +224,8 @@
     }>();
 
     /**
-     * @param selectData 选中的数据
-     * @param close 是否收起关闭，默认不关闭，通过closeByMode函数判断
+     * @param selectData selected data
+     * @param close whether to close, default is not closed, determined by closeByMode function
      */
     const sumbitTokens = (selectData: IDataItem[], close = false) => {
         let res = getValByMode(selectData, props.mode);
@@ -240,11 +240,11 @@
         }
     };
 
-    // 确认confirm时候
+    // Confirm when confirm
     const confirmChains = () => {
         props.changeInputFlag && props.changeInputFlag(true);
         const inputItems = inputItemsByMode(tokenInput.value, props.mode);
-        // 双选时候，如果选择框没有值时候希望填充
+        // When double selection, if the selection box is empty, it is hoped to fill in
         if (props.mode === MODES.double && inputItems.length === 0) {
             const matchItem: IDataItem | undefined = flatData.value.find(
                 (v) => v.id === props.associateId
@@ -267,7 +267,7 @@
         sumbitTokens(selectItems.value, true);
     };
 
-    // 监听滚动
+    // Listen to scrolling
     const isBoundary = ref<
         {
             top?: boolean;
@@ -278,7 +278,7 @@
     const scrollFn = (visible: boolean) => {
         if (visible) {
             isBoundary.value = [];
-            // 加上延迟是因为，打开之后就直接返回visible了，但是收起来之后才会返回visible。
+            // Add delay because after opening, it immediately returns visible, but only returns visible after closing.
             setTimeout(() => {
                 eleRef.value = document.querySelectorAll('.chains_wrap');
                 Array.prototype.forEach.call(eleRef.value, (ele: HTMLElement, ind: number) => {
@@ -301,10 +301,10 @@
     };
 
     const visibleChange = (visible: boolean) => {
-        // 收起展开时候都重新赋值
+        // When closing and opening, reassign values
         resetVal(props.value, props.inputFlag);
 
-        // 监听一些滚动，只是为了加阴影
+        // Listen to some scrolling, just to add shadows
         scrollFn(visible);
     };
 
@@ -313,16 +313,16 @@
         const inputItems = inputItemsByMode(tokenInput.value, props.mode);
 
         switch (props.mode) {
-            // 多选时候都输出
+            // When multiple selection, all output
             case MODES.multiple:
                 res = getLastArrs([...selectItems.value, ...inputItems]);
                 break;
-            // 只选择两个时候
+            // When only selecting two
             case MODES.double:
-                // 输入框作为选择项
+                // Input box as selection item
                 res = getLastArrs(inputItems).slice(0, 2);
                 const matchItem = flatData.value.find((v) => v.id === props.associateId);
-                // 填充选项，选中all，这里作为配置项传进来。
+                // Fill options, select all, here as configuration items.
                 if (inputItems.length === 1) {
                     if (matchItem) {
                         res = [...inputItems, matchItem] as IDataItem[];
@@ -332,7 +332,7 @@
                 }
                 break;
             default:
-                // 单选时候，清空选择框
+                // When single selection, clear the selection box
                 res = getLastArrs(inputItems);
                 break;
         }
@@ -348,12 +348,12 @@
 
         sumbitTokens(selectItems.value);
 
-        // 写成内联函数形式，只是为了减少onSelected主体代码。
+        // Written as inline function, just to reduce the main code of onSelected.
         function selectByMode() {
             let index;
             switch (props.mode) {
                 case MODES.multiple:
-                    // 多选时候，有取消操作
+                    // When multiple selection, there is a cancel operation
                     index = selectItems.value.findIndex((v) => v.id === item.id);
                     if (index === -1) {
                         selectItems.value.push(item);
@@ -364,21 +364,21 @@
                         ];
                     }
                     break;
-                // 只选择两个时候, 清空input, 超过两个重选
+                // When only selecting two, clear input, select again if more than two
                 case MODES.double:
                     if (selectItems.value.length >= 2) {
                         selectItems.value = [item];
                         tokenInput.value = '';
                     } else {
                         index = selectItems.value.findIndex((v) => v.id === item.id);
-                        // 可以选择自己两次的，比如all选项
+                        // Can select itself twice, like all options
                         if (index === -1 || item.doubleTime) {
                             selectItems.value.push(item);
                         }
                     }
                     break;
                 default:
-                    // 单选时候，选择和输入只能有一个，所以清除input输入
+                    // When single selection, only one of selection and input can be selected, so clear input
                     selectItems.value = [item];
                     tokenInput.value = '';
             }
@@ -410,7 +410,7 @@
     }
     .dropdown_container {
         height: 36px;
-        border: 1px solid var(--bj-border-color);
+        border: 1px solid var(--ibc-border-color);
         border-radius: 4px;
         background-color: #fff;
         min-width: 124px;
@@ -419,36 +419,36 @@
     .button_icon {
         transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
         padding: 0 2px;
-        border-left: 1px solid var(--bj-border-color);
+        border-left: 1px solid var(--ibc-border-color);
         height: 34px;
 
         .iconfont {
             font-size: 18px;
-            color: var(--bj-text-third);
+            color: var(--ibc-text-third);
         }
     }
 
     .visible_border {
-        border: 1px solid var(--bj-primary-color) !important;
+        border: 1px solid var(--ibc-primary-color) !important;
         box-shadow: 0 0 0 2px rgb(61 80 255 / 20%);
     }
 
     .visible_color {
-        color: var(--bj-primary-color) !important;
+        color: var(--ibc-primary-color) !important;
     }
 
     .default_color {
-        color: var(--bj-text-second);
+        color: var(--ibc-text-second);
         &:hover {
-            border-color: var(--bj-primary-color);
+            border-color: var(--ibc-primary-color);
         }
     }
     .disabled_border {
         background: #eef0f6;
-        border: 1px solid var(--bj-border-color);
+        border: 1px solid var(--ibc-border-color);
         cursor: url(../../assets/forbidden.png), not-allowed;
         &:hover {
-            border-color: var(--bj-border-color);
+            border-color: var(--ibc-border-color);
         }
         & > div {
             opacity: 0.5;
@@ -459,7 +459,7 @@
     }
 
     .multiple {
-        border: 1px solid var(--bj-primary-color);
+        border: 1px solid var(--ibc-primary-color);
         margin: 2px;
         padding: 0 10px;
         border-radius: 4px;
@@ -471,7 +471,7 @@
         box-shadow: 0px 2px 8px 0px #d9deec;
         border-radius: 4px;
         min-height: 200px;
-        border: 1px solid var(--bj-border-color);
+        border: 1px solid var(--ibc-border-color);
         padding: 16px 4px 24px 16px;
         transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
@@ -506,8 +506,8 @@
         user-select: none;
         padding: 5px 8px 5px 8px;
         border-radius: 4px;
-        color: var(--bj-text-second);
-        background: var(--bj-background-color);
+        color: var(--ibc-text-second);
+        background: var(--ibc-background-color);
         width: 158px;
         box-sizing: border-box;
 
@@ -525,7 +525,7 @@
         }
 
         &:hover {
-            border-color: var(--bj-primary-color);
+            border-color: var(--ibc-primary-color);
         }
         .symbol {
             overflow: hidden;
@@ -539,7 +539,7 @@
             border-radius: 16px;
             line-height: 14px;
             color: #fff;
-            background-color: var(--bj-primary-color);
+            background-color: var(--ibc-primary-color);
             font-size: 10px;
             padding: 1px 8px;
             white-space: nowrap;
@@ -559,7 +559,7 @@
         width: 20px;
 
         &__color {
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             text-align: center;
             margin: -2px -2px;
             word-break: break-word;

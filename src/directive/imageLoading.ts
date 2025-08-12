@@ -7,13 +7,13 @@ export const imgLoadingDirective: Directive = {
         }
     },
     mounted(el, binding) {
-        // 监听是否进入可视区域
+        // Listen to whether it enters the visible area
         const observer = new IntersectionObserver(([{ isIntersecting }]) => {
-            // 如果进入可视区域
+            // If it enters the visible area
             if (isIntersecting) {
-                // 给图片的 src 属性赋值图片地址
+                // Assign the image address to the src attribute of the image
                 el.src = binding.value;
-                // 取消图片监听
+                // Cancel image monitoring
                 observer.unobserve(el);
             }
         });

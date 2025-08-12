@@ -41,8 +41,8 @@
     const { visible, placeholders, selectItems, selectColorDefaultVal } = toRefs(props);
 
     const getClassStr = (selectVal: IDataItem, vals: TDenom[]) => {
-        // 没有选择时，展开为 selected_color__third，关闭为 selected_color__default
-        // 选择的时候，包含默认值时候 selected_color__default，非默认值高亮 selected_color
+        // When no selection: expanded shows selected_color__third, collapsed shows selected_color__default
+        // When selected: default values show selected_color__default, non-default values highlight with selected_color
 
         if (!selectVal) {
             return visible.value ? 'selected_color__third' : 'selected_color__default';
@@ -74,16 +74,16 @@
         flex: 1;
     }
     .selected_color {
-        color: var(--bj-primary-color);
+        color: var(--ibc-primary-color);
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
         max-width: 118px;
         &__default {
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
         }
         &__third {
-            color: var(--bj-text-third);
+            color: var(--ibc-text-third);
         }
     }
     .selectedInfo_title {

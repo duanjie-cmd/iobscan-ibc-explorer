@@ -60,7 +60,7 @@
             </div>
             <div class="volume__content__selected">
                 <div class="volume__content__selected__dropdown wrapRelative">
-                    <BjSelect
+                    <Select
                         :data="chainData"
                         :value="searchChain"
                         placeholder="All Chains"
@@ -183,9 +183,9 @@
                         top: 50%;
                         left: 50%;
                         transform: translate(-50%, -50%);
-                        font-size: var(--bj-font-size-normal);
+                        font-size: var(--ibc-font-size-normal);
                         font-weight: 400;
-                        color: var(--bj-font-color-65);
+                        color: var(--ibc-font-color-65);
                     }
                     &__card {
                         padding: 8px 0;

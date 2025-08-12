@@ -92,21 +92,21 @@
         &__container {
             .flex(column, nowrap, flex-start, flex-start);
             &:hover {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
             }
         }
         &__value {
             .flex(row, nowrap, flex-start, center);
             width: 100%;
             min-width: 145px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-font-color-65);
-            line-height: var(--bj-font-size-normal);
+            color: var(--ibc-font-color-65);
+            line-height: var(--ibc-font-size-normal);
         }
         &__hover {
             &:hover {
-                color: var(--bj-primary-color);
+                color: var(--ibc-primary-color);
             }
         }
         &__icon {

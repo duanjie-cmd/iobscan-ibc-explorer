@@ -31,22 +31,22 @@
             margin-top: 12px;
             padding: 16px;
             background: #f8fafd;
-            border-radius: var(--border-radius-normal);
+            border-radius: var(--ibc-border-radius-normal);
         }
         &__label {
             width: 92px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-family: GolosUI_Medium;
             font-weight: 500;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             line-height: 18px;
         }
         &__value {
             flex: 1;
             margin-left: 24px;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             line-height: 18px;
         }
         &__column {

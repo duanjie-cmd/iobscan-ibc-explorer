@@ -155,43 +155,43 @@
                 .iconfont {
                     display: inline-block;
                     margin-right: 4px;
-                    font-size: var(--bj-font-size-sub-title);
+                    font-size: var(--ibc-font-size-sub-title);
                 }
             }
             &__hash {
-                color: var(--bj-text-second);
+                color: var(--ibc-text-second);
                 &:hover {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                 }
             }
             &__success {
-                color: var(--bj-success);
+                color: var(--ibc-success);
             }
             &__failed {
-                color: var(--bj-failed);
+                color: var(--ibc-failed);
             }
             &__tag {
                 margin-right: 4px;
                 min-width: 28px;
                 min-height: 16px;
-                font-size: var(--bj-font-size-small);
+                font-size: var(--ibc-font-size-small);
                 font-family: GolosUI_Medium;
                 border-radius: 8px;
             }
             &__in_style {
-                color: var(--bj-in-color);
-                background: var(--bj-in-color-o-10);
+                color: var(--ibc-in-color);
+                background: var(--ibc-in-color-o-10);
             }
             &__out_style {
-                color: var(--bj-out-color);
-                background: var(--bj-out-color-o-10);
+                color: var(--ibc-out-color);
+                background: var(--ibc-out-color-o-10);
             }
             &__icon {
                 width: 16px;
                 height: 16px;
                 line-height: 16px;
                 color: #fff;
-                background: var(--bj-primary-color);
+                background: var(--ibc-primary-color);
                 border-radius: 50%;
             }
         }

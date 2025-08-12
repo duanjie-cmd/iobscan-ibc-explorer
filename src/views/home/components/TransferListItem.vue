@@ -39,7 +39,7 @@
                 </div>
                 <div
                     class="list_subItem"
-                    :style="{ borderBottom: isFinal ? '' : '1px solid var(--bj-border-color)' }"
+                    :style="{ borderBottom: isFinal ? '' : '1px solid var(--ibc-border-color)' }"
                 >
                     <div class="list_subItem__adress_container">
                         <hash-addr-icon :item="item"></hash-addr-icon>
@@ -112,7 +112,7 @@
                 &:hover {
                     .list_subItem__value,
                     .list_subItem__title {
-                        color: var(--bj-primary-color);
+                        color: var(--ibc-primary-color);
                     }
                 }
                 .list_subItem__title_container {
@@ -122,24 +122,24 @@
                     max-width: 150px;
                 }
                 .list_subItem__title_container_border_bottom {
-                    border-bottom: 1px solid var(--bj-border-color);
+                    border-bottom: 1px solid var(--ibc-border-color);
                 }
                 .list_subItem__value {
                     width: 100%;
                     text-align: left;
-                    font-size: var(--bj-font-size-sub-title);
+                    font-size: var(--ibc-font-size-sub-title);
                     font-family: GolosUI_Medium;
-                    color: var(--bj-text-normal);
-                    line-height: var(--bj-font-size-normal);
+                    color: var(--ibc-text-normal);
+                    line-height: var(--ibc-font-size-normal);
                 }
 
                 .list_subItem__title {
                     text-align: left;
                     margin-top: 4px;
-                    font-size: var(--bj-font-size-normal);
+                    font-size: var(--ibc-font-size-normal);
                     font-family: GolosUI_Medium;
                     font-weight: 400;
-                    color: var(--bj-text-third);
+                    color: var(--ibc-text-third);
                     line-height: 18px;
                     width: 150px;
                     white-space: nowrap;
@@ -153,17 +153,17 @@
         &__ago {
             width: 150px;
             text-align: right;
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-font-color-65);
-            line-height: var(--bj-font-size-normal);
+            color: var(--ibc-font-color-65);
+            line-height: var(--ibc-font-size-normal);
         }
         &__number {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-family: GolosUI_Medium;
             font-weight: 400;
-            color: var(--bj-text-third);
-            line-height: var(--bj-font-size-normal);
+            color: var(--ibc-text-third);
+            line-height: var(--ibc-font-size-normal);
             margin: 0 0 0 8px;
         }
         &__icon {
@@ -220,7 +220,7 @@
                 }
             }
             &__line {
-                border-bottom: 1px solid var(--bj-border-color);
+                border-bottom: 1px solid var(--ibc-border-color);
             }
             &__ago {
             }
@@ -241,7 +241,7 @@
         .list_item {
             width: 100%;
             &__wrap {
-                border-bottom: 1px solid var(--bj-border-color);
+                border-bottom: 1px solid var(--ibc-border-color);
             }
             &__line_hidden {
                 border-bottom: none;

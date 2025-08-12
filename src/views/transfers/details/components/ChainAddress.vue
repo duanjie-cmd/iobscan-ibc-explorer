@@ -45,22 +45,22 @@
     .address {
         .flex(column, nowrap, flex-start, flex-start);
         &__label {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-family: GolosUI_Medium;
             font-weight: 500;
-            color: var(--bj-text-normal);
+            color: var(--ibc-text-normal);
             line-height: 18px;
             white-space: nowrap;
         }
         &__value {
-            font-size: var(--bj-font-size-normal);
+            font-size: var(--ibc-font-size-normal);
             font-weight: 400;
-            color: var(--bj-text-second);
+            color: var(--ibc-text-second);
             line-height: 18px;
             word-break: break-all;
             &__text {
                 &:hover {
-                    color: var(--bj-primary-color);
+                    color: var(--ibc-primary-color);
                 }
             }
         }

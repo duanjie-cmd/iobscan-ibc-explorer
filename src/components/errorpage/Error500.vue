@@ -71,7 +71,7 @@
                 &__description {
                     margin-top: 15px;
                     color: rgba(255, 255, 255, 0.75);
-                    font-size: var(--bj-font-size-normal);
+                    font-size: var(--ibc-font-size-normal);
                     font-weight: 400;
                     line-height: 16px;
                 }
