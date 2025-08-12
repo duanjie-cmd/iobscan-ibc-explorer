@@ -5,33 +5,33 @@ module.exports = {
             2,
             'always',
             [
-                'feature', // 新功能（feature）
-                'bug', // 此项特别针对bug号，用于向测试反馈bug列表的bug修改情况
-                'fix', // 修补bug
-                'ui', // 更新 ui
-                'docs', // 文档（documentation）
-                'style', // 格式（不影响代码运行的变动）
-                'perf', // 性能优化
-                'refactor', // 重构（即不是新增功能，也不是修改bug的代码变动）
-                'chore', // 构建过程或辅助工具的变动
-                'merge' // 合并分支， 例如： merge（前端页面）： feature-xxxx修改线程地址
+                'feature', // New feature
+                'bug', // Bug fixes specifically for bug numbers from testing feedback
+                'fix', // Bug fixes
+                'ui', // UI updates
+                'docs', // Documentation changes
+                'style', // Code formatting (changes that do not affect code execution)
+                'perf', // Performance optimization
+                'refactor', // Code refactoring (neither adding features nor fixing bugs)
+                'chore', // Build process or auxiliary tool changes
+                'merge' // Merge branches, e.g.: merge(frontend): feature-xxxx thread address modification
             ]
         ],
-        // <type> 格式 小写
+        // <type> format: lowercase
         'type-case': [2, 'always', 'lower-case'],
-        // <type> 可以为空
+        // <type> can be empty
         'type-empty': [0, 'never'],
-        // <scope> 可以为空
+        // <scope> can be empty
         'scope-empty': [0, 'never'],
-        // <scope> 范围格式
+        // <scope> format
         'scope-case': [0],
-        // <subject> 主要 message 可以为空
+        // <subject> main message can be empty
         'subject-empty': [0, 'never'],
-        // <subject> 以什么为结束标志，禁用
+        // <subject> ending punctuation, disabled
         'subject-full-stop': [0, 'never'],
-        // <subject> 格式，禁用
+        // <subject> format, disabled
         'subject-case': [0, 'never'],
-        // <body> 以空行开头
+        // <body> starts with blank line
         'body-leading-blank': [1, 'always'],
         'header-max-length': [0, 'always', 72]
     }
